@@ -227,7 +227,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
   MoveForce: 1
-  RotateForce: 10
+  RotateForce: 2
+--- !u!114 &321829209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321829203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5974d781cf4a4848a766e41e674f256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOxygen
 --- !u!1 &547613973
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +707,14 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5516094714087391095, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516094714087391095, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: m_AngularDamping
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -702,6 +722,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1963256269393994531, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       insertIndex: -1
       addedObject: {fileID: 321829208}
+    - targetCorrespondingSourceObject: {fileID: 1963256269393994531, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 321829209}
   m_SourcePrefab: {fileID: 100100000, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
