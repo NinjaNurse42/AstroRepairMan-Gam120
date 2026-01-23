@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform TransFormToFollow;
+    public Vector3 Offset;
 
-    // Update is called once per frame
-    void Update()
+    [Range(0f, 1f)]
+    public float Interpolant = 0.15f;
+
+    void LateUpdate()
     {
-        
+        if (!TransFormToFollow) return;
+
+        Vector3 targetPos = TransFormToFollow.position + Offset;
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetPos,
+            Interpolant
+        );
     }
 }
