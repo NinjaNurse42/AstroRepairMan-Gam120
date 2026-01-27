@@ -13,6 +13,7 @@ public class PlayerOxygen : MonoBehaviour
 
     float oxygenLevel;
     [SerializeField] bool isInOxygenZone;
+    bool isInSmogZone;
 
     float debugTimer;
 
@@ -54,7 +55,7 @@ public class PlayerOxygen : MonoBehaviour
         {
             oxygenLevel = Mathf.Max(0f, oxygenLevel - depletionRateOutside * dt);
         }
-
+  
         // Optionally apply suffocation damage when out of oxygen (left intentional empty here)
         if (oxygenLevel <= 0f)
         {
