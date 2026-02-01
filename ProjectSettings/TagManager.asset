@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - OxygenRefil
+  - Material
   layers:
   - Default
   - TransparentFX
