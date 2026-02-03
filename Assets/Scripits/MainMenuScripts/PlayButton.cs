@@ -9,8 +9,14 @@ public class PlayButton : MonoBehaviour
         SceneManager.LoadScene("AstroRepairMap");
     }
 
-    public void QuitGame()
+    public void QuitGame ()
     {
         Application.Quit();
     }
+    public void Prototype()
+    {
+        SceneManager.LoadScene("TestScene");
+
+    }
 }
+
