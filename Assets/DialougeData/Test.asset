@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
   dialouge:
-  - Hello WRGJIWGIWGGJWEGJEWKGEWGEWEWGEGEG
-  - YOU SUCK WERGJWGGWJGEWJGEKJGEKJ
+  - Hello, Press Space to skip
+  - Pick up repair pieces to repair the red zone. Gain oxygen in the blue.
