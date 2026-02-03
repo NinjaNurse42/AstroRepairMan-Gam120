@@ -52783,7 +52783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5516094714087391095, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_AngularDamping
-      value: 15
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 7863296333509503956, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: MoveForce
