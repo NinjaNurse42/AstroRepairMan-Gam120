@@ -57,10 +57,7 @@ public class PlayerOxygen : MonoBehaviour
         }
   
         // Optionally apply suffocation damage when out of oxygen (left intentional empty here)
-        if (oxygenLevel <= 0f)
-        {
-           
-        }
+      
 
         // Debug logging once per debugLogInterval seconds (not every frame)
         if (enableDebugLogs)
