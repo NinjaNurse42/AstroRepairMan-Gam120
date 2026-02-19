@@ -6,13 +6,14 @@ public class PlayerOxygen : MonoBehaviour
     [SerializeField] float depletionRateOutside = 0.5f; // oxygen lost per second when not in zone
     [SerializeField] float regenRateInside = 15f; // oxygen restored per second inside zone
     [SerializeField] float suffocationDamagePerSecond = 20f;
-
+  
     [Header("Debug")]
     [SerializeField] bool enableDebugLogs = true;
     [SerializeField] float debugLogInterval = 1f;
 
     float oxygenLevel;
     [SerializeField] bool isInOxygenZone;
+    PlayerDamage playerDamage;
     bool isInSmogZone;
 
     float debugTimer;
@@ -32,6 +33,9 @@ public class PlayerOxygen : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log($"PlayerOxygen.Start: initialized with max oxygen: {maxOxygen}", this);
     }
+
+  
+
 
     void Update()
     {
@@ -70,6 +74,25 @@ public class PlayerOxygen : MonoBehaviour
                 Debug.Log($"PlayerOxygen.Update: oxygen={oxygenLevel:F2} change={change:F3} inZone={isInOxygenZone}", this);
             }
         }
+
+        if (oxygenLevel <= 0f)
+        {
+            if (enableDebugLogs)
+                Debug.Log("PlayerOxygen.Update: oxygen depleted - triggering respawn", this);
+
+            if (playerDamage != null)
+            {
+                playerDamage.ForceRespawn();
+            }
+            else
+            {
+                Debug.LogWarning("PlayerOxygen: PlayerDamage component not found; cannot respawn.", this);
+            }
+
+            // Restore oxygen after respawn so player doesn't instantly die again
+            oxygenLevel = maxOxygen;
+        }
+
     }
 
     // Called by zone triggers (OxygenZone) or any other code
@@ -86,10 +109,14 @@ public class PlayerOxygen : MonoBehaviour
         SetInOxygenZone(!isInOxygenZone);
     }
 
+  
     public float GetOxygenPercent()
     {
         return Mathf.Clamp01(oxygenLevel / maxOxygen);
     }
 
     public float GetOxygenLevel() => oxygenLevel;
+
+
+    
 }
