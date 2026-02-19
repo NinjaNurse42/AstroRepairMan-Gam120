@@ -61,11 +61,23 @@ public class PlayerDamage : MonoBehaviour
 
     void Teleport(Vector3 target)
     {
+     
         rb.position = target;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
 
         transform.position = target;
+        if (playerOxygen != null)
+        {
+            playerOxygen.ResetOxygen();
+            if (debugLogCollisions)
+                Debug.Log("PlayerDamage.Teleport: player oxygen reset after respawn", this);
+        }
+        else
+        {
+            if (debugLogCollisions)
+                Debug.LogWarning("PlayerDamage.Teleport: playerOxygen not assigned - cannot reset oxygen", this);
+        }
 
         if (debugLogCollisions)
             Debug.Log($"Respawned at {target}", this);

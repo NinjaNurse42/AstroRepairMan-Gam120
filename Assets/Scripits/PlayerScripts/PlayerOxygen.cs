@@ -116,7 +116,12 @@ public class PlayerOxygen : MonoBehaviour
     }
 
     public float GetOxygenLevel() => oxygenLevel;
+    public void ResetOxygen()
+    {
+        oxygenLevel = maxOxygen;
+        if (enableDebugLogs)
+            Debug.Log("PlayerOxygen.ResetOxygen: oxygen restored to max", this);
+    }
 
 
-    
 }
