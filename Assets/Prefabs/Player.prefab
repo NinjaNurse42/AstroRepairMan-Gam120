@@ -102,11 +102,10 @@ GameObject:
   - component: {fileID: 1466683530839547381}
   - component: {fileID: 5516094714087391095}
   - component: {fileID: 9055280379111497522}
-  - component: {fileID: 2179687751089128063}
-  - component: {fileID: 1109983136687164055}
-  - component: {fileID: 5207776911310896399}
-  - component: {fileID: 8135611375515795144}
-  - component: {fileID: 3444362132389633788}
+  - component: {fileID: 1187044368559371608}
+  - component: {fileID: 2352985241635551769}
+  - component: {fileID: 619358330381820512}
+  - component: {fileID: 3203911486539337632}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -202,7 +201,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 50
+  m_AngularDamping: 67
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -265,7 +264,7 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
---- !u!114 &2179687751089128063
+--- !u!114 &1187044368559371608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,8 +277,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
   MoveForce: 1
-  RotateForce: 2
---- !u!114 &1109983136687164055
+  RotateForce: 0.5
+--- !u!114 &2352985241635551769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963256269393994531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43a0a454104f8643a5c251560c296e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+--- !u!114 &619358330381820512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963256269393994531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56db8611d976d3741bc5efddf2c7f8e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  parts: 0
+--- !u!114 &3203911486539337632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,45 +321,3 @@ MonoBehaviour:
   enableDebugLogs: 0
   debugLogInterval: 1
   isInOxygenZone: 0
---- !u!114 &5207776911310896399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963256269393994531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56db8611d976d3741bc5efddf2c7f8e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
-  parts: 0
---- !u!114 &8135611375515795144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963256269393994531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43a0a454104f8643a5c251560c296e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
---- !u!114 &3444362132389633788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963256269393994531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abc0149098591a43a908f5816f01a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDamage
-  deathImpactSpeed: 12
-  damageLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  debugLogCollisions: 1
