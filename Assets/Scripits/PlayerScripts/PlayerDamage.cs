@@ -5,11 +5,18 @@ public class PlayerDamage : MonoBehaviour
     [Header("Death Settings")]
     [SerializeField] float deathImpactSpeed = 6f;   // Adjust this to tune sensitivity
     [SerializeField] LayerMask damageLayers = ~0;
-
+    [SerializeField] PlayerOxygen playerOxygen;
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
     Rigidbody2D rb;
+
+     void Update()
+    {
+        // Check for suffocation damage
+       
+        
+    }
 
     void Start()
     {
