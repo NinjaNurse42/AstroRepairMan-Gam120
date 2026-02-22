@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
   dialouge:
-  - Hello, Press Space to skip
-  - Pick up repair pieces to repair the red zone. Gain oxygen in the blue.
+  - Hello, Press Space to skip.
+  - 'Pick up 3 repair pieces to repair the red dot by pressing E nearby. Gain oxygen
+    in the blue.
+
+    Press Space to skip.'
