@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 9 5th repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - 'Damage Control: Captain.'
+  - "Captain: I don\u2019t wanna hear it."
+  - "Damage Control: Tell the crew that we\u2019re halfway there."
+  - "Captain: I can\u2019t.\r\n"
+  - 'Damage Control: Why not?
+
+'
+  - "Captain: If they hear that the matter is only halfway finished, they\u2019ll
+    riot."
+  - 'Captain: I see the worry in their eyes, the jitters of anxiety in their movements.
+
+'
+  - "Captain: They\u2019re looking at photos of their families, embracing each other,
+    preparing for the end.."
+  - 'Damage Control: It might be more hopeful than you think.'
+  - "Captain: I\u2019ll think about it.\r\n"

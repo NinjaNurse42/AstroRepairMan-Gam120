@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 1 Intro
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - 'Captain: Damage control, report!'
+  - 'Damage Control: A chunk of that asteroid just hit the lower station. Slipped
+    right past the guns.
+
+'
+  - 'Captain: Damn it! Turn them to manual and get crew on them. And get someone
+    out there to assess the damage.'
+  - "Damage Control: Yes ma\u2019am."
+  - 'Damage Control: Asteroid did a number on the station. You might have to repair
+    a door or two to get outside. '
+  - "Damage Control: You\u2019re pretty handy with that welder, I\u2019m sure you
+    can do it with a few bits of scrap."

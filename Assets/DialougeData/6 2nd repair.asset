@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 6 2nd repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - 'Damage Control: Uh, Captain?
+
+'
+  - "Captain: What\u2019s going on?\r\n"
+  - "Damage Control: Lower defenses are on the fritz. Looks like they\u2019re targeting
+    almost anything within their range."
+  - 'Captain: Can you fix it?'
+  - "Damage Control: Negative, ma\u2019am. We\u2019ll have to wait until after we
+    escape the singularity\u2019s pull."
+  - 'Captain: Alright. Stay in touch.'

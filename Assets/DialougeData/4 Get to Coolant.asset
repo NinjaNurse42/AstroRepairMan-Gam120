@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 4 Get to Coolant
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - 'Captain: Status?
+
+'
+  - "Damage Control: Looks like the source of our malfunction. Captain, there\u2019s
+    a coolant leak, but it looks repairable."
+  - "Damage Control: Captain, there\u2019s a coolant leak, but it looks repairable."
+  - 'Captain: Will our thrusters be functional afterward?'
+  - 'Damage Control: From the looks of it, yes.'
+  - "Damage Control: Hey, my advice is to stick to the station and to debris. You\u2019ll
+    find more scrap there, and you won\u2019t get lost in the black. \r\n"
+  - "Damage Control: And try not to get yourself killed. I\u2019m not sure if the
+    cloning facilities are online."
+  - "Damage Control: Hey, it\u2019s up to you now. I\u2019ll upload visuals of the
+    station to your HUD to keep you oriented."

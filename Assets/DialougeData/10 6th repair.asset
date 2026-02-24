@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 10 6th repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - 'Damage Control: How you holding up Captain?'
+  - "Captain: I\u2019m\u2026 scared."
+  - "Captain: I have faith that he\u2019ll get it done. I just don\u2019t know how
+    much larger this bubble of unrest will get before it pops."
+  - "Damage Control: I\u2019ve dealt with something like this before, y\u2019know."
+  - 'Captain: Really?'
+  - 'Damage Control: It was the cruise ship Zenith. During a twenty-week nebula tour,
+    she had a fuel leak next to a neutron star.'
+  - 'Damage Control: We had maybe an hour or two before the fuel would seep out into
+    the ignited engines and the entire ship would go up in flames.'
+  - 'Damage Control: You think professional scientists lose their cool? Try a cruise
+    ship of rich tourists with everything to lose.'
+  - "Damage Control: My team and I were under constant pressure from them and our
+    superiors, and dying in my early twenties wasn\u2019t something on my bucket
+    list."
+  - "Damage Control: We got it sorted out. We\u2019ll be alright."
+  - "Captain: I\u2019ll speak to them again. Good luck."

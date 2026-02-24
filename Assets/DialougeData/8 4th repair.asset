@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 8 4th repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - "Damage Control: Captain, we\u2019re falling into an asteroid field."
+  - "Captain: What\u2019s the damage gonna look like?"
+  - "Damage Control: Nothing major, but it\u2019ll be a rough ride. How\u2019s the
+    crew?"
+  - "Captain: Scientists are under control, but nobody likes sitting around waiting
+    to see if we\u2019re gonna die."
+  - "Damage Control: What if we clone him multiple times? It\u2019ll make the job
+    faster."
+  - 'Captain: Absolutely not.'
+  - "Damage Control: We\u2019d save lives."
+  - "Captain: And we\u2019d have to kill any that live afterwards, unless we want
+    everyone on board to die too."
+  - 'Damage Control: The Seattle Incident was one mishap. How many other times did
+    clones meet and not kill each other?'
+  - "Captain: That\u2019s the only time on record."
+  - 'Damage Control: On record. If the crew want solace, we can give it to them faster.'
+  - "Captain: You\u2019re out of line. This matter is closed."
