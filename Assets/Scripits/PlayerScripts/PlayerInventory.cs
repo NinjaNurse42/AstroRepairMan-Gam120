@@ -20,4 +20,9 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
     
+    public void RepairPointCounter()
+    {
+
+    }
+
 }
