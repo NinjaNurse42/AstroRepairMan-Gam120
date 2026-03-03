@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 11 7th repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - "Captain: Crew\u2019s eased up a bit, but the growing pit of darkness out the
+    viewport isn\u2019t helping.\r\n"
+  - "Damage Control: Captain, we\u2019re gonna be cutting it close.\r\n"
+  - 'Captain: How close?'
+  - "Damage Control: With our current progress rate, we\u2019ll leave with five minutes
+    to spare. We\u2019re running out of scrap nearby."
+  - 'Damage Control: Might have to start diving out past the station, into the oncoming
+    asteroids. That takes time.'
+  - "Captain: I\u2026 "
+  - "Damage Control: It\u2019s not game over yet."
+  - 'Captain: Get those clones online.
+
+'
+  - "Damage Control: Ma\u2019am?"
+  - 'Captain: We have a responsibility to these people. I am going to get them back
+    to their families.'
+  - "Damage Control: Copy that\u2026 No\u2026 No, no no."
+  - "Captain: What\u2019s happening?\r\n"
+  - 'Damage Control: Power to the cloning facility has been cut off.'
+  - 'Captain: They have emergency batteries, though.
+
+'
+  - "Damage Control: Yeah, but that won\u2019t last forever, and if all the clones
+    die at once\u2026"
+  - "Captain: I see. Well, that settles it. I\u2019ll angle the escape pods to give
+    them as long of an orbit around the black hole as possible."
+  - "Captain: If anyone reads our distress signal, maybe they\u2019ll be able to
+    get here in time to save them."
+  - 'Damage Control: Evacuate the people you can, but keep transports on standby.
+    If we can fix this coolant leak, we can leave and pick them up.'
+  - "Damage Control: Captain\u2019s getting desperate. Once the Newton\u2019s in
+    the black hole, our distress signal stops."
+  - "Damage Control: No one\u2019s gonna pay attention to a blip on their feed this
+    far out. It\u2019s all up to you.\r\n"

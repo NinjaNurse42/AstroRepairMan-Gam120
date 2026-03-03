@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d34bac7ea81cb4dbefc446136a6511, type: 3}
+  m_Name: 13 9th repair
+  m_EditorClassIdentifier: Assembly-CSharp::DialougeObject
+  dialouge:
+  - "Damage Control: Engines are as in good shape as they\u2019ll be. One last repair
+    to the coolant line and we\u2019re set."
+  - 'Captain: How much time do we have left?'
+  - 'Damage Control: Five minutes at the most.'
+  - "Captain: What\u2019s your name?\r\n"
+  - "Damage Control: Ma\u2019am, we\u2019ll make it."
+  - "Captain: I\u2019m Selina.\r\n"
+  - 'Damage Control: Heh, high class.'
+  - 'Selina: Sure am. Always loved the stars.
+
+'
+  - 'Damage Control: I was more of a planet gal myself. Grew up on Mars. '
+  - 'Damage Control: Not much to see there. I signed up for the navy first chance
+    I got to get away from home.'
+  - 'Selina: Not a great place?'
+  - "Damage Control: \u2026"
+  - "Damage Control: You have no idea. Don\u2019t have this scar on my face for decoration."
+  - "Selina: I\u2019m\u2026 sorry."
+  - "Damage Control: Don\u2019t worry about it. If anything it taught me to treat
+    my kids better. Name\u2019s Mindy, by the way."
+  - "Selina: It\u2019s been an honor serving with you, Mindy.\r\n"
+  - 'Mindy: You too, Captain.'
