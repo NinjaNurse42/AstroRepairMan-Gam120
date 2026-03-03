@@ -9,6 +9,10 @@ public class RepairPoint : MonoBehaviour
     public GameObject brokenPart;
     public GameObject repairedPart;
 
+
+    [Header("Optional Dialogue")]
+    [SerializeField] DialougeObject onRepairedDialogue;
+
     void Start()
     {
         repairedPart.SetActive(false);
@@ -25,6 +29,11 @@ public class RepairPoint : MonoBehaviour
             repairedPart.SetActive(true);
 
             Debug.Log("Station system repaired");
+
+            if (onRepairedDialogue != null)
+            {
+                DialougeManager.Show(onRepairedDialogue);
+            }
         }
         else
         {
