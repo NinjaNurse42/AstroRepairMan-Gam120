@@ -15,7 +15,6 @@ public class DoorOpen : MonoBehaviour
     {
         if (repairPoint != null && repairPoint.TotalRepair >= 1 && !opened)
         {
-            Debug.Log("Test");
             anim.SetTrigger("OpenDoor1"); 
             opened = true; 
         }
