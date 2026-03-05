@@ -1,24 +1,25 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerDamage : MonoBehaviour
 {
-    private Animator anim;
-    private Rigidbody2D rb;
-
     [Header("Death Settings")]
-    [SerializeField] float deathImpactSpeed = 6f;
+    [SerializeField] float deathImpactSpeed = 6f;   // Adjust this to tune sensitivity
     [SerializeField] LayerMask damageLayers = ~0;
     [SerializeField] PlayerOxygen playerOxygen;
-
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
-    bool isDead = false;
+    Rigidbody2D rb;
+
+     void Update()
+    {
+        // Check for suffocation damage
+       
+        
+    }
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
         if (!CheckPointManager.HasCheckpoint)
@@ -27,8 +28,7 @@ public class PlayerDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDead) return;
-
+        // Ignore layers not included in damageLayers
         if ((damageLayers.value & (1 << collision.gameObject.layer)) == 0)
         {
             if (debugLogCollisions)
@@ -46,51 +46,38 @@ public class PlayerDamage : MonoBehaviour
             if (debugLogCollisions)
                 Debug.Log("Fatal impact detected!", this);
 
-            Die();
+            RespawnAtCheckpoint();
         }
     }
 
-    // PUBLIC so other scripts like PlayerOxygen can call it
-    public void Die()
-    {
-        if (isDead) return;
-
-        isDead = true;
-
-        anim.SetTrigger("Explode");
-
-        StartCoroutine(RespawnDelay());
-    }
-
-    IEnumerator RespawnDelay()
-    {
-        yield return new WaitForSeconds(1f);
-
-        anim.SetTrigger("Restore");
-
-        yield return new WaitForSeconds(0.5f);
-
-        RestorePlayer();
-    }
-
-    public void RestorePlayer()
+    void RespawnAtCheckpoint()
     {
         Vector3 target = CheckPointManager.HasCheckpoint
             ? CheckPointManager.LastCheckpoint
             : Vector3.zero;
 
+        Teleport(target);
+    }
+
+    void Teleport(Vector3 target)
+    {
+     
         rb.position = target;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
 
         transform.position = target;
-
         if (playerOxygen != null)
+        {
             playerOxygen.ResetOxygen();
-
-        anim.ResetTrigger("Explode");
-
-        isDead = false;
+            if (debugLogCollisions)
+                Debug.Log("PlayerDamage.Teleport: player oxygen reset after respawn", this);
+        }
+        else
+        {
+            if (debugLogCollisions)
+                Debug.LogWarning("PlayerDamage.Teleport: playerOxygen not assigned - cannot reset oxygen", this);
+        }
 
         if (debugLogCollisions)
             Debug.Log($"Respawned at {target}", this);
@@ -98,6 +85,8 @@ public class PlayerDamage : MonoBehaviour
 
     public void ForceRespawn()
     {
-        Die();
+        RespawnAtCheckpoint();
     }
 }
+
+
