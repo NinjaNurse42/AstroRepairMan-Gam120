@@ -2,21 +2,27 @@ using UnityEngine;
 
 public class PlayerOxygen : MonoBehaviour
 {
-     float maxOxygen = 100f;
-    [SerializeField] float depletionRateOutside = 0.5f; // oxygen lost per second when not in zone
-    [SerializeField] float regenRateInside = 15f; // oxygen restored per second inside zone
+    float maxOxygen = 100f;
 
-  
+    [SerializeField] float depletionRateOutside = 0.5f;
+    [SerializeField] float regenRateInside = 15f;
+
     [Header("Debug")]
     [SerializeField] bool enableDebugLogs = true;
     [SerializeField] float debugLogInterval = 1f;
 
     float oxygenLevel;
-    [SerializeField] bool isInOxygenZone;
-    PlayerDamage playerDamage;
-    bool isInSmogZone;
+    bool isInOxygenZone;
 
+    PlayerDamage playerDamage;
+
+    bool isSuffocating = false;
     float debugTimer;
+
+    void Awake()
+    {
+        playerDamage = GetComponent<PlayerDamage>();
+    }
 
     void OnValidate()
     {
@@ -30,24 +36,17 @@ public class PlayerOxygen : MonoBehaviour
     {
         oxygenLevel = maxOxygen;
         debugTimer = 0f;
+
         if (enableDebugLogs)
             Debug.Log($"PlayerOxygen.Start: initialized with max oxygen: {maxOxygen}", this);
     }
-
-  
-
 
     void Update()
     {
         float dt = Time.deltaTime;
 
-        // Guard: if time is frozen, don't pretend to update
         if (dt <= 0f)
-        {
-            if (enableDebugLogs)
-                Debug.Log("PlayerOxygen.Update: deltaTime is zero - Time.timeScale may be 0", this);
             return;
-        }
 
         float before = oxygenLevel;
 
@@ -59,69 +58,62 @@ public class PlayerOxygen : MonoBehaviour
         {
             oxygenLevel = Mathf.Max(0f, oxygenLevel - depletionRateOutside * dt);
         }
-  
-        // Optionally apply suffocation damage when out of oxygen (left intentional empty here)
-      
 
-        // Debug logging once per debugLogInterval seconds (not every frame)
         if (enableDebugLogs)
         {
             debugTimer += dt;
+
             if (debugTimer >= debugLogInterval)
             {
                 debugTimer = 0f;
+
                 float change = oxygenLevel - before;
+
                 Debug.Log($"PlayerOxygen.Update: oxygen={oxygenLevel:F2} change={change:F3} inZone={isInOxygenZone}", this);
             }
         }
 
-        if (oxygenLevel <= 0f)
+        if (oxygenLevel <= 0f && !isSuffocating)
         {
+            isSuffocating = true;
+
             if (enableDebugLogs)
-                Debug.Log("PlayerOxygen.Update: oxygen depleted - triggering respawn", this);
+                Debug.Log("PlayerOxygen: Oxygen depleted. Triggering explosion death.", this);
 
             if (playerDamage != null)
-            {
-                playerDamage.ForceRespawn();
-            }
-            else
-            {
-                Debug.LogWarning("PlayerOxygen: PlayerDamage component not found; cannot respawn.", this);
-            }
-
-            // Restore oxygen after respawn so player doesn't instantly die again
-            oxygenLevel = maxOxygen;
+                playerDamage.Die();
         }
-
     }
 
-    // Called by zone triggers (OxygenZone) or any other code
     public void SetInOxygenZone(bool inZone)
     {
         isInOxygenZone = inZone;
+
         if (enableDebugLogs)
             Debug.Log($"PlayerOxygen.SetInOxygenZone: now inZone={inZone}", this);
     }
 
-    // small helper you can call from Inspector (via button) or other scripts to toggle
     public void ToggleOxygenZone()
     {
         SetInOxygenZone(!isInOxygenZone);
     }
 
-  
     public float GetOxygenPercent()
     {
         return Mathf.Clamp01(oxygenLevel / maxOxygen);
     }
 
-    public float GetOxygenLevel() => oxygenLevel;
+    public float GetOxygenLevel()
+    {
+        return oxygenLevel;
+    }
+
     public void ResetOxygen()
     {
         oxygenLevel = maxOxygen;
+        isSuffocating = false;
+
         if (enableDebugLogs)
             Debug.Log("PlayerOxygen.ResetOxygen: oxygen restored to max", this);
     }
-
-
 }
