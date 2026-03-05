@@ -5,9 +5,14 @@ public class RepairPoint : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int repairCost = 5;
     public bool isRepaired = false;
+    public int TotalRepair = 0;
 
     public GameObject brokenPart;
     public GameObject repairedPart;
+
+
+    [Header("Optional Dialogue")]
+    [SerializeField] DialougeObject onRepairedDialogue;
 
     void Start()
     {
@@ -23,8 +28,14 @@ public class RepairPoint : MonoBehaviour
             isRepaired = true;
             brokenPart.SetActive(false);
             repairedPart.SetActive(true);
+            TotalRepair++;
 
             Debug.Log("Station system repaired");
+
+            if (onRepairedDialogue != null)
+            {
+                DialougeManager.Show(onRepairedDialogue);
+            }
         }
         else
         {

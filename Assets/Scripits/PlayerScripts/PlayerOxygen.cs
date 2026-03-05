@@ -5,7 +5,7 @@ public class PlayerOxygen : MonoBehaviour
      float maxOxygen = 100f;
     [SerializeField] float depletionRateOutside = 0.5f; // oxygen lost per second when not in zone
     [SerializeField] float regenRateInside = 15f; // oxygen restored per second inside zone
-    [SerializeField] float suffocationDamagePerSecond = 20f;
+
   
     [Header("Debug")]
     [SerializeField] bool enableDebugLogs = true;
