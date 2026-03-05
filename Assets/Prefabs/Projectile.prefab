@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6713509220438537703}
   - component: {fileID: 972653662490949691}
   - component: {fileID: -4248887080783733832}
+  - component: {fileID: 8765563387178894779}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.69671, y: -9.66379, z: 0}
-  m_LocalScale: {x: 0.13733, y: 0.13733, z: 0.13733}
+  m_LocalScale: {x: 0.26761496, y: 0.26761496, z: 0.26761496}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,30 @@ MonoBehaviour:
   lifeTime: 4
   damage: 1
   destroyOnAnyCollision: 1
+--- !u!50 &8765563387178894779
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843852862048671697}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

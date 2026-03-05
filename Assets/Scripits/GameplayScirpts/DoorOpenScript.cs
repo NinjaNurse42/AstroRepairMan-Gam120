@@ -3,19 +3,19 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour
 {
     public RepairPoint repairPoint; 
-    private Animator anim;
+    private Animator anime;
     private bool opened = false;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anime = GetComponent<Animator>();
     }
 
     void Update()
     {
         if (repairPoint != null && repairPoint.TotalRepair >= 1 && !opened)
         {
-            anim.SetTrigger("OpenDoor1"); 
+            anime.SetTrigger("OpenDoor1"); 
             opened = true; 
         }
     }
