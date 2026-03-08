@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 5279714184103180917}
   - component: {fileID: 3281358064733708322}
   - component: {fileID: 2807683564783284202}
+  - component: {fileID: 3558150976036628803}
+  - component: {fileID: 3819465797120468798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,7 +126,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.19, y: 0.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2636558446157520031}
@@ -202,7 +204,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 20
+  m_AngularDamping: 15
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -222,7 +224,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963256269393994531}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -277,8 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564016e37966b4d498cd71728a50a29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  MoveForce: 1
-  RotateForce: 0.5
+  MoveForce: 2
+  RotateForce: 2
 --- !u!114 &5743561395322760632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerOxygen
   depletionRateOutside: 0.5
   regenRateInside: 15
-  suffocationDamagePerSecond: 20
   enableDebugLogs: 0
   debugLogInterval: 1
   isInOxygenZone: 0
@@ -334,9 +335,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abc0149098591a43a908f5816f01a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDamage
-  deathImpactSpeed: 6
+  deathImpactSpeed: 20
   damageLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  playerOxygen: {fileID: 0}
+  playerOxygen: {fileID: 3281358064733708322}
   debugLogCollisions: 1
+--- !u!58 &3558150976036628803
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963256269393994531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0072637796, y: 0.13504314}
+  m_Radius: 0.45277345
+--- !u!114 &3819465797120468798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963256269393994531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fa59efdac0f404283f8f6020badf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinimapSwitcher
+  Map0: {fileID: 0}
+  Map1: {fileID: 0}
+  Map2: {fileID: 0}
+  Map3: {fileID: 0}
+  Map4: {fileID: 0}
+  Map5: {fileID: 0}
+  Map6: {fileID: 0}
+  Map7: {fileID: 0}
+  Map8: {fileID: 0}
+  Map9: {fileID: 0}
+  Cam0: {fileID: 0}
+  Cam1: {fileID: 0}
+  Cam2: {fileID: 0}
+  Cam3: {fileID: 0}
+  Cam4: {fileID: 0}
+  Cam5: {fileID: 0}
+  Cam6: {fileID: 0}
+  Cam7: {fileID: 0}
+  Cam8: {fileID: 0}
+  Cam9: {fileID: 0}
+  player: {fileID: 1963256269393994531}
