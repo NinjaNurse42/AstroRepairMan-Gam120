@@ -6,6 +6,16 @@ TagManager:
   tags:
   - OxygenRefil
   - Material
+  - Zone1
+  - Zone2
+  - Zone3
+  - Zone4
+  - Zone5
+  - Zone6
+  - Zone7
+  - Zone8
+  - Zone9
+  - Zone10
   layers:
   - Default
   - TransparentFX
