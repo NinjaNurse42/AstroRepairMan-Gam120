@@ -16,8 +16,7 @@ MonoBehaviour:
   - 'Captain: Status?
 
 '
-  - "Damage Control: Looks like the source of our malfunction. Captain, there\u2019s
-    a coolant leak, but it looks repairable."
+  - 'Damage Control: Looks like the source of our malfunction.'
   - "Damage Control: Captain, there\u2019s a coolant leak, but it looks repairable."
   - 'Captain: Will our thrusters be functional afterward?'
   - 'Damage Control: From the looks of it, yes.'
@@ -25,5 +24,3 @@ MonoBehaviour:
     find more scrap there, and you won\u2019t get lost in the black. \r\n"
   - "Damage Control: And try not to get yourself killed. I\u2019m not sure if the
     cloning facilities are online."
-  - "Damage Control: Hey, it\u2019s up to you now. I\u2019ll upload visuals of the
-    station to your HUD to keep you oriented."
