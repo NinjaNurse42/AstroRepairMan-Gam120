@@ -141695,7 +141695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1bdee1fa4688a40807b4b1a8307ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OxygenUI
-  playerOxygen: {fileID: 2139349854}
+  playerOxygen: {fileID: 0}
   oxygenSlider: {fileID: 994923064}
   fillImage: {fileID: 1412632644}
 --- !u!114 &994923064
@@ -191987,7 +191987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1bdee1fa4688a40807b4b1a8307ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OxygenUI
-  playerOxygen: {fileID: 2139349854}
+  playerOxygen: {fileID: 0}
   oxygenSlider: {fileID: 1326393344}
   fillImage: {fileID: 1494254109}
 --- !u!114 &1326393344
@@ -311019,17 +311019,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1260875081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.568}
---- !u!114 &2139349854 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3281358064733708322, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-  m_PrefabInstance: {fileID: 2044500538}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5974d781cf4a4848a766e41e674f256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerOxygen
 --- !u!1001 &2142786950
 PrefabInstance:
   m_ObjectHideFlags: 0
