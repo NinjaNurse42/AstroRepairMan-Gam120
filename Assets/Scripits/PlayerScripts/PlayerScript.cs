@@ -9,10 +9,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D RB;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        RB = GetComponent<Rigidbody2D>();
-    }
+    void Start() => RB = GetComponent<Rigidbody2D>();
 
     // Update is called once per frame
     void Update()

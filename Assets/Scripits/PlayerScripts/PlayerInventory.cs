@@ -1,8 +1,11 @@
+using UnityEditor.Rendering;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
     public int parts = 0;
+    public int dialogue = 0;
 
     public  void AddParts(int amount)
     {
@@ -15,13 +18,16 @@ public class PlayerInventory : MonoBehaviour
         if (parts >= amount)
         {
             parts -= amount;
+            ++dialogue;
             return true;
         }
         return false;
     }
     
-    public void RepairPointCounter()
+    public void Storytime(int story)
     {
+        dialogue = story;
+        
 
     }
 
