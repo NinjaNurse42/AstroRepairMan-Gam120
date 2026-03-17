@@ -96,8 +96,5 @@ public class PlayerDamage : MonoBehaviour
             Debug.Log($"Respawned at {target}", this);
     }
 
-    public void ForceRespawn()
-    {
-        Die();
-    }
+    public void ForceRespawn() => Die();
 }

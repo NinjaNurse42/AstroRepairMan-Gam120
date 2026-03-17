@@ -19,10 +19,7 @@ public class PlayerOxygen : MonoBehaviour
     bool isSuffocating = false;
     float debugTimer;
 
-    void Awake()
-    {
-        playerDamage = GetComponent<PlayerDamage>();
-    }
+    void Awake() => playerDamage = GetComponent<PlayerDamage>();
 
     void OnValidate()
     {
@@ -93,20 +90,11 @@ public class PlayerOxygen : MonoBehaviour
             Debug.Log($"PlayerOxygen.SetInOxygenZone: now inZone={inZone}", this);
     }
 
-    public void ToggleOxygenZone()
-    {
-        SetInOxygenZone(!isInOxygenZone);
-    }
+    public void ToggleOxygenZone() => SetInOxygenZone(!isInOxygenZone);
 
-    public float GetOxygenPercent()
-    {
-        return Mathf.Clamp01(oxygenLevel / maxOxygen);
-    }
+    public float GetOxygenPercent() => Mathf.Clamp01(oxygenLevel / maxOxygen);
 
-    public float GetOxygenLevel()
-    {
-        return oxygenLevel;
-    }
+    public float GetOxygenLevel() => oxygenLevel;
 
     public void ResetOxygen()
     {

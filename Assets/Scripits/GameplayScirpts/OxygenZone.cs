@@ -11,15 +11,9 @@ public class OxygenZone : MonoBehaviour
             col2.isTrigger = true;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        HandleEnterExit(other.gameObject, true);
-    }
+    void OnTriggerEnter2D(Collider2D other) => HandleEnterExit(other.gameObject, true);
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        HandleEnterExit(other.gameObject, false);
-    }
+    void OnTriggerExit2D(Collider2D other) => HandleEnterExit(other.gameObject, false);
 
     void HandleEnterExit(GameObject other, bool inZone)
     {

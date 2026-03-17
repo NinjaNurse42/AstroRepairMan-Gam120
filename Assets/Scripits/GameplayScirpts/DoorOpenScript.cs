@@ -6,10 +6,7 @@ public class DoorOpen : MonoBehaviour
     private Animator anime;
     private bool opened = false;
 
-    void Start()
-    {
-        anime = GetComponent<Animator>();
-    }
+    void Start() => anime = GetComponent<Animator>();
 
     void Update()
     {
