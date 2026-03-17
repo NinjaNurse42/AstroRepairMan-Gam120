@@ -15069,10 +15069,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairPoint (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28832,10 +28828,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59204,10 +59196,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -93641,10 +93629,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairPoint (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -100910,10 +100894,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114970,10 +114950,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairPoint (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -127891,10 +127867,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairPoint (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -131459,10 +131431,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -213444,10 +213412,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairPoint (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -219449,10 +219413,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -231673,10 +231633,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -282792,10 +282748,6 @@ PrefabInstance:
     - target: {fileID: 7018182227679456429, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
       propertyPath: m_Name
       value: RepairPoint (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200054180163513341, guid: e9ec07975d076be4185884cdca363f2b, type: 3}
-      propertyPath: repairCost
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

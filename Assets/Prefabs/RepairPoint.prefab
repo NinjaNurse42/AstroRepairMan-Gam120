@@ -196,10 +196,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a11ca7b03068a14abf67608b20ad693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RepairPoint
-  repairCost: 5
+  repairCost: 3
   isRepaired: 0
+  TotalRepair: 0
   brokenPart: {fileID: 3662072602260783816}
   repairedPart: {fileID: 8165665988782975537}
+  onRepairedDialogue: {fileID: 0}
 --- !u!58 &2101543319324866322
 CircleCollider2D:
   m_ObjectHideFlags: 0
