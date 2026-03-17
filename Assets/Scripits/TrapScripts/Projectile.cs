@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Ensure top-down projectile doesn't fall due to gravity
+        
         if (rb != null)
             rb.gravityScale = 0f;
     }

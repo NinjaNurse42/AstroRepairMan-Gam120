@@ -28,7 +28,22 @@ public class PlayerDamage : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDead) return;
+        if (collision.gameObject == null) return;
 
+        // If collided with a projectile, die immediately
+        var proj = collision.gameObject.GetComponent<Projectile>();
+        if (proj != null)
+        {
+            if (debugLogCollisions)
+                Debug.Log("Hit by projectile (collision) -> dying", this);
+
+            // Optionally destroy the projectile; if projectile handles its own destruction this is safe as well
+            Destroy(proj.gameObject);
+            Die();
+            return;
+        }
+
+        // Existing impact-based death handling
         if ((damageLayers.value & (1 << collision.gameObject.layer)) == 0)
         {
             if (debugLogCollisions)
@@ -36,7 +51,8 @@ public class PlayerDamage : MonoBehaviour
             return;
         }
 
-        float speed = rb.linearVelocity.magnitude;
+        // Use correct Rigidbody2D API (velocity)
+        float speed = rb != null ? rb.linearVelocity.magnitude : 0f;
 
         if (debugLogCollisions)
             Debug.Log($"Impact speed: {speed:F2}", this);
@@ -50,6 +66,26 @@ public class PlayerDamage : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isDead) return;
+        if (other == null || other.gameObject == null) return;
+
+        // If entered trigger by projectile, die immediately
+        var proj = other.GetComponent<Projectile>();
+        if (proj != null)
+        {
+            if (debugLogCollisions)
+                Debug.Log("Hit by projectile (trigger) -> dying", this);
+
+            Destroy(proj.gameObject);
+            Die();
+            return;
+        }
+
+        // Other trigger-based logic could go here...
+    }
+
     // PUBLIC so other scripts like PlayerOxygen can call it
     public void Die()
     {
@@ -57,7 +93,8 @@ public class PlayerDamage : MonoBehaviour
 
         isDead = true;
 
-        anim.SetTrigger("Explode");
+        if (anim != null)
+            anim.SetTrigger("Explode");
 
         StartCoroutine(RespawnDelay());
     }
@@ -66,7 +103,8 @@ public class PlayerDamage : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        anim.SetTrigger("Restore");
+        if (anim != null)
+            anim.SetTrigger("Restore");
 
         yield return new WaitForSeconds(0.5f);
 
@@ -79,16 +117,20 @@ public class PlayerDamage : MonoBehaviour
             ? CheckPointManager.LastCheckpoint
             : Vector3.zero;
 
-        rb.position = target;
-        rb.linearVelocity = Vector2.zero;
-        rb.angularVelocity = 0f;
+        if (rb != null)
+        {
+            rb.position = target;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
 
         transform.position = target;
 
         if (playerOxygen != null)
             playerOxygen.ResetOxygen();
 
-        anim.ResetTrigger("Explode");
+        if (anim != null)
+            anim.ResetTrigger("Explode");
 
         isDead = false;
 
