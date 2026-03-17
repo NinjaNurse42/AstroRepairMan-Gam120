@@ -14,10 +14,7 @@ public class RepairPoint : MonoBehaviour
     [Header("Optional Dialogue")]
     [SerializeField] DialougeObject onRepairedDialogue;
 
-    void Start()
-    {
-        repairedPart.SetActive(false);
-    }
+    void Start() => repairedPart.SetActive(false);
 
     public void TryRepair(PlayerInventory inventory)
     {

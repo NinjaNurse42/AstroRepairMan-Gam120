@@ -5,10 +5,7 @@ public class PlayerInteraction : MonoBehaviour
     private RepairPoint currentRepair;
     private PlayerInventory inventory;
 
-    void Start()
-    {
-        inventory = GetComponent<PlayerInventory>();
-    }
+    void Start() => inventory = GetComponent<PlayerInventory>();
 
     void Update()
     {
