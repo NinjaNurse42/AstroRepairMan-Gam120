@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.69671, y: -9.66379, z: 0}
-  m_LocalScale: {x: 0.26761496, y: 0.26761496, z: 0.26761496}
+  m_LocalScale: {x: 0.5566114, y: 1.6645828, z: 0.38899392}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   lifeTime: 4
   damage: 1
-  destroyOnAnyCollision: 1
+  destroyOnAnyCollision: 0
 --- !u!50 &8765563387178894779
 Rigidbody2D:
   serializedVersion: 5
@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

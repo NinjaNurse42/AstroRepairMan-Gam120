@@ -209,7 +209,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.53, y: -9.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.3863616, y: 4.3863616, z: 4.3863616}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7991278339628588332}
@@ -289,16 +289,16 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  detectionRadius: 8
+  detectionRadius: 50
   obstructionMask:
     serializedVersion: 2
     m_Bits: 0
   turretHead: {fileID: 7991278339628588332}
   rotationSpeed: 360
-  aimToleranceDegrees: 6
+  aimToleranceDegrees: 10
   firePoint: {fileID: 6898555710305725203}
   projectilePrefab: {fileID: 3843852862048671697, guid: ac401dd641c1da048be23f892dc590de, type: 3}
-  projectileSpeed: 12
+  projectileSpeed: 25
   projectileLifeTime: 4
   fireRate: 1
   onlyFireWhenInSight: 1
