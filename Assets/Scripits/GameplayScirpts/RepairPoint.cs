@@ -29,6 +29,17 @@ public class RepairPoint : MonoBehaviour
 
             Debug.Log("Station system repaired");
 
+            // Restore one shield on the player who performed the repair (if they have PlayerSheilds)
+            if (inventory != null)
+            {
+                var shields = inventory.GetComponent<PlayerSheilds>();
+                if (shields != null)
+                {
+                    shields.RestoreOne();
+                    Debug.Log("RepairPoint: restored 1 player shield", this);
+                }
+            }
+
             if (onRepairedDialogue != null)
             {
                 DialougeManager.Show(onRepairedDialogue);

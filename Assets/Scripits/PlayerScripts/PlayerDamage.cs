@@ -16,10 +16,14 @@ public class PlayerDamage : MonoBehaviour
 
     bool isDead = false;
 
+    // cached shield component
+    PlayerSheilds shields;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        shields = GetComponent<PlayerSheilds>();
 
         if (!CheckPointManager.HasCheckpoint)
             CheckPointManager.SetCheckpoint(transform.position);
@@ -30,20 +34,26 @@ public class PlayerDamage : MonoBehaviour
         if (isDead) return;
         if (collision.gameObject == null) return;
 
-        // If collided with a projectile, die immediately
+        // If collided with a projectile, attempt to let shields absorb it first
         var proj = collision.gameObject.GetComponent<Projectile>();
         if (proj != null)
         {
             if (debugLogCollisions)
-                Debug.Log("Hit by projectile (collision) -> dying", this);
+                Debug.Log("Hit by projectile (collision)", this);
 
-            // Optionally destroy the projectile; if projectile handles its own destruction this is safe as well
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
+
+            // destroy projectile on hit
             Destroy(proj.gameObject);
+
+            if (absorbed)
+                return;
+
             Die();
             return;
         }
 
-        // Existing impact-based death handling
+        // Existing impact-based death handling (speed-based)
         if ((damageLayers.value & (1 << collision.gameObject.layer)) == 0)
         {
             if (debugLogCollisions)
@@ -51,7 +61,6 @@ public class PlayerDamage : MonoBehaviour
             return;
         }
 
-        // Use correct Rigidbody2D API (velocity)
         float speed = rb != null ? rb.linearVelocity.magnitude : 0f;
 
         if (debugLogCollisions)
@@ -60,7 +69,12 @@ public class PlayerDamage : MonoBehaviour
         if (speed >= deathImpactSpeed)
         {
             if (debugLogCollisions)
-                Debug.Log("Fatal impact detected!", this);
+                Debug.Log("High-speed impact detected", this);
+
+            // Try to absorb with shields first
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
+            if (absorbed)
+                return;
 
             Die();
         }
@@ -71,19 +85,26 @@ public class PlayerDamage : MonoBehaviour
         if (isDead) return;
         if (other == null || other.gameObject == null) return;
 
-        // If entered trigger by projectile, die immediately
+        // Handle projectile configured as trigger
         var proj = other.GetComponent<Projectile>();
         if (proj != null)
         {
             if (debugLogCollisions)
-                Debug.Log("Hit by projectile (trigger) -> dying", this);
+                Debug.Log("Hit by projectile (trigger)", this);
 
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
+
+            // destroy projectile on hit
             Destroy(proj.gameObject);
+
+            if (absorbed)
+                return;
+
             Die();
             return;
         }
 
-        // Other trigger-based logic could go here...
+        // Other trigger logic (e.g. checkpoints) not handled here
     }
 
     // PUBLIC so other scripts like PlayerOxygen can call it
@@ -132,11 +153,18 @@ public class PlayerDamage : MonoBehaviour
         if (anim != null)
             anim.ResetTrigger("Explode");
 
+        // Optional: restore shields on respawn
+        if (shields != null)
+            shields.RestoreAll();
+
         isDead = false;
 
         if (debugLogCollisions)
             Debug.Log($"Respawned at {target}", this);
     }
 
-    public void ForceRespawn() => Die();
+    public void ForceRespawn()
+    {
+        Die();
+    }
 }
