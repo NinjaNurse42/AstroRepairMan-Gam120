@@ -311679,7 +311679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6968227118405845861, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: RotateForce
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
