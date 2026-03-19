@@ -3,7 +3,7 @@ using UnityEngine;
 public class RepairPoint : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public int repairCost = 2;
+    public int repairCost = 3;
     public bool isRepaired = false;
     public int TotalRepair = 0;
 
