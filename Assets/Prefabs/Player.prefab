@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564016e37966b4d498cd71728a50a29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  MoveForce: 2
-  RotateForce: 1.5
+  MoveForce: 6
+  RotateForce: 9
 --- !u!114 &5743561395322760632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   parts: 0
+  dialogue: 0
 --- !u!114 &3281358064733708322
 MonoBehaviour:
   m_ObjectHideFlags: 0
