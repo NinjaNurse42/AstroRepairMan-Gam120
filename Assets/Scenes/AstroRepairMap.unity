@@ -67576,11 +67576,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2464932087201622842, guid: df95a1ecc0240134ea197c4755106638, type: 3}
   m_PrefabInstance: {fileID: 424024669}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &424267838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1963256269393994531, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-  m_PrefabInstance: {fileID: 2044500538}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &425717162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327138,11 +327133,11 @@ PrefabInstance:
       objectReference: {fileID: 898740330}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -426.76
+      value: 141
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.78
+      value: 752
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -327176,21 +327171,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6968227118405845861, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: MoveForce
-      value: 6
+    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: maxShields
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 6968227118405845861, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: RotateForce
-      value: 9
+    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: startingShields
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: onShieldsChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: onShieldsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1963256269393994531, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2139349874}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
 --- !u!1 &2044943735
 GameObject:
@@ -344769,7 +344769,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3281358064733708322, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
   m_PrefabInstance: {fileID: 2044500538}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424267838}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5974d781cf4a4848a766e41e674f256, type: 3}
@@ -344780,7 +344780,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5279714184103180917, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
   m_PrefabInstance: {fileID: 2044500538}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424267838}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56db8611d976d3741bc5efddf2c7f8e8, type: 3}
@@ -344791,18 +344791,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5516094714087391095, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
   m_PrefabInstance: {fileID: 2044500538}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2139349874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424267838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ebbebdfcf14fc44ba07ae535b62387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSheilds
 --- !u!1 &2140027139
 GameObject:
   m_ObjectHideFlags: 0
