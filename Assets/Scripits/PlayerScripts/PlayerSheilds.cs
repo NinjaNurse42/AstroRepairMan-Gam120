@@ -57,6 +57,7 @@ public class PlayerSheilds : MonoBehaviour
 
             return true;
         }
+        return false;
     }
 
     /// <summary>
