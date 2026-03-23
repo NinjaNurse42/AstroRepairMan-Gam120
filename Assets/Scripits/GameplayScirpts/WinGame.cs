@@ -19,7 +19,7 @@ public class WinCondition : MonoBehaviour
             }
         }
 
-        Debug.Log("Repaired Count: " + repairedCount);
+     //   Debug.Log("Repaired Count: " + repairedCount);
 
         if (repairedCount >= repairsToWin)
         {
