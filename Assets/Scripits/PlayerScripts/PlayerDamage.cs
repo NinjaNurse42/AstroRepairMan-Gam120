@@ -5,6 +5,7 @@ public class PlayerDamage : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
+    private PlayerSheilds shields;
 
     [Header("Death Settings")]
     [SerializeField] float deathImpactSpeed = 6f;
@@ -30,6 +31,7 @@ public class PlayerDamage : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        shields = GetComponent<PlayerSheilds>();
 
         if (!CheckPointManager.HasCheckpoint)
             CheckPointManager.SetCheckpoint(transform.position);
@@ -52,11 +54,24 @@ public class PlayerDamage : MonoBehaviour
         if (proj != null)
         {
             if (debugLogCollisions)
-                Debug.Log("Hit by projectile (collision) -> dying", this);
+                Debug.Log("Hit by projectile (collision) -> checking shields", this);
+
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
 
             LastDeathReason = projectileDeathMessage;
 
             Destroy(proj.gameObject);
+
+            if (absorbed)
+            {
+                if (debugLogCollisions)
+                    Debug.Log("Projectile absorbed by shields", this);
+                return;
+            }
+
+            if (debugLogCollisions)
+                Debug.Log("No shields available -> dying", this);
+
             Die();
             return;
         }
@@ -101,6 +116,17 @@ public class PlayerDamage : MonoBehaviour
             LastDeathReason = projectileDeathMessage;
 
             Destroy(proj.gameObject);
+
+            if (absorbed)
+            {
+                if (debugLogCollisions)
+                    Debug.Log("Projectile absorbed by shields", this);
+                return;
+            }
+
+            if (debugLogCollisions)
+                Debug.Log("No shields available -> dying", this);
+
             Die();
             return;
         }
@@ -148,6 +174,10 @@ public class PlayerDamage : MonoBehaviour
 
         if (playerOxygen != null)
             playerOxygen.ResetOxygen();
+
+        if (shields != null)
+            shields.RestoreAll();
+
 
         if (anim != null)
             anim.ResetTrigger("Explode");
