@@ -168,6 +168,10 @@ public class PlayerDamage : MonoBehaviour
         if (playerOxygen != null)
             playerOxygen.ResetOxygen();
 
+        if (shields != null)
+            shields.RestoreAll();
+
+
         if (anim != null)
             anim.ResetTrigger("Explode");
 
