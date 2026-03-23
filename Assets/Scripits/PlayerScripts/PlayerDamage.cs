@@ -15,11 +15,12 @@ public class PlayerDamage : MonoBehaviour
     [Header("Death Dialogue")]
     [SerializeField] string projectileDeathMessage = "Hit by projectile!";
     [SerializeField] string impactDeathMessage = "Crashed at high speed!";
+    [SerializeField] TextboxUI textboxUI; // drag your TextboxUI here for death dialogue
 
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
-    // ✅ GLOBAL death reason (accessible from ANY script)
+    // ✅ GLOBAL death reason (accessible from any script)
     public static string LastDeathReason;
 
     bool isDead = false;
@@ -41,13 +42,12 @@ public class PlayerDamage : MonoBehaviour
     {
         // ✅ Track velocity every frame BEFORE collision happens
         if (rb != null)
-            lastVelocity = rb.linearVelocity;
+            lastVelocity = rb.velocity; // linearVelocity or velocity works depending on your Rigidbody type
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDead) return;
-        if (collision.gameObject == null) return;
+        if (isDead || collision.gameObject == null) return;
 
         // ✅ Projectile check (collision)
         var proj = collision.gameObject.GetComponent<Projectile>();
@@ -103,15 +103,16 @@ public class PlayerDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isDead) return;
-        if (other == null || other.gameObject == null) return;
+        if (isDead || other == null || other.gameObject == null) return;
 
         // ✅ Projectile check (trigger)
         var proj = other.GetComponent<Projectile>();
         if (proj != null)
         {
             if (debugLogCollisions)
-                Debug.Log("Hit by projectile (trigger) -> dying", this);
+                Debug.Log("Hit by projectile (trigger) -> checking shields", this);
+
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
 
             LastDeathReason = projectileDeathMessage;
 
@@ -128,7 +129,6 @@ public class PlayerDamage : MonoBehaviour
                 Debug.Log("No shields available -> dying", this);
 
             Die();
-            return;
         }
     }
 
@@ -141,6 +141,10 @@ public class PlayerDamage : MonoBehaviour
 
         if (anim != null)
             anim.SetTrigger("Explode");
+
+        // ✅ Trigger death dialogue if TextboxUI assigned
+        if (textboxUI != null)
+            textboxUI.OnPlayerDeath();
 
         StartCoroutine(RespawnDelay());
     }
@@ -166,7 +170,7 @@ public class PlayerDamage : MonoBehaviour
         if (rb != null)
         {
             rb.position = target;
-            rb.linearVelocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
 
@@ -177,7 +181,6 @@ public class PlayerDamage : MonoBehaviour
 
         if (shields != null)
             shields.RestoreAll();
-
 
         if (anim != null)
             anim.ResetTrigger("Explode");
