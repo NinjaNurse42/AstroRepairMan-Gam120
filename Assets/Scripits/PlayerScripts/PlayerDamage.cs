@@ -42,7 +42,7 @@ public class PlayerDamage : MonoBehaviour
     {
         // ✅ Track velocity every frame BEFORE collision happens
         if (rb != null)
-            lastVelocity = rb.velocity; // linearVelocity or velocity works depending on your Rigidbody type
+            lastVelocity = rb.linearVelocity; // linearVelocity or velocity works depending on your Rigidbody type
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -170,7 +170,7 @@ public class PlayerDamage : MonoBehaviour
         if (rb != null)
         {
             rb.position = target;
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
 
