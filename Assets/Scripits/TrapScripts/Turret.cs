@@ -148,19 +148,5 @@ public class Turret : MonoBehaviour
         Destroy(go, projectileLifeTime);
     }
 
-    void OnDrawGizmosSelected()
-    {
-        if (!showGizmos)
-            return;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
-
-        if (firePoint != null)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawLine(firePoint.position, firePoint.position + (turretHead != null ? turretHead.up : transform.up) * 1.2f);
-            Gizmos.DrawWireSphere(firePoint.position, 0.08f);
-        }
-    }
+ 
 }
