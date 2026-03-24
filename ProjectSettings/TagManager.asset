@@ -16,7 +16,6 @@ TagManager:
   - Zone8
   - Zone9
   - Zone10
-  - ElectricBolt
   layers:
   - Default
   - TransparentFX

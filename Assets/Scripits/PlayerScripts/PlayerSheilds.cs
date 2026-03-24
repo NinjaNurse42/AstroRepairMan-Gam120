@@ -37,21 +37,27 @@ public class PlayerSheilds : MonoBehaviour
     /// </summary>
     public bool TryAbsorbDamage(int amount = 1)
     {
-        if (amount <= 0)
-            return true; // nothing to absorb
+        amount = currentShields;
+        if (amount > 0)
+        {
+            --amount;
+            return true;
+        }
+        else if (amount <= 0)
+        { 
+            return false;
+        }
 
-        if (currentShields <= 0)
-            return false; // no shields to absorb
-
-        int used = Mathf.Min(currentShields, amount);
-        currentShields -= used;
-
+        currentShields = Mathf.Max(0, currentShields - amount);
         onShieldsChanged?.Invoke(currentShields, maxShields);
 
         if (debugLogs)
-            Debug.Log($"PlayerSheilds: absorbed {used} damage. Shields now {currentShields}/{maxShields}", this);
+        {
+            Debug.Log($"PlayerSheilds: absorbed {amount} damage. Shields now {currentShields}/{maxShields}", this);
 
-        return true;
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
