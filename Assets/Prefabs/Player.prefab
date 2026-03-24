@@ -514,6 +514,42 @@ MonoBehaviour:
   - repairNumber: 1
     dialouge: {fileID: 11400000, guid: 114dfdd72ff614f48a556143c46faa46, type: 2}
     hasTriggered: 0
+  - repairNumber: 2
+    dialouge: {fileID: 11400000, guid: 0cc58fed82be25341b85a2f692da2b33, type: 2}
+    hasTriggered: 0
+  - repairNumber: 3
+    dialouge: {fileID: 11400000, guid: be6678cd6ff1ef345bcbbbf4f19a08e5, type: 2}
+    hasTriggered: 0
+  - repairNumber: 4
+    dialouge: {fileID: 11400000, guid: 97e70dde6d36d10438987dbe3dfbfca4, type: 2}
+    hasTriggered: 0
+  - repairNumber: 5
+    dialouge: {fileID: 11400000, guid: 312252004335d5849ba595f8f5bc2639, type: 2}
+    hasTriggered: 0
+  - repairNumber: 6
+    dialouge: {fileID: 11400000, guid: d82bc631c3fec5947a6abd4f1f0054fd, type: 2}
+    hasTriggered: 0
+  - repairNumber: 7
+    dialouge: {fileID: 11400000, guid: 8a0656b92c5ba944d98f5a864cebda7e, type: 2}
+    hasTriggered: 0
+  - repairNumber: 8
+    dialouge: {fileID: 11400000, guid: 7e3cf38e2838a414891e4527feb2f230, type: 2}
+    hasTriggered: 0
+  - repairNumber: 9
+    dialouge: {fileID: 11400000, guid: 9b3a654368e7b90409e6dd9656ebc784, type: 2}
+    hasTriggered: 0
+  - repairNumber: 10
+    dialouge: {fileID: 11400000, guid: f65489cff7f52df4491f20ec66a8ff00, type: 2}
+    hasTriggered: 0
+  - repairNumber: 11
+    dialouge: {fileID: 11400000, guid: 7fb7099c0bc190c4f923292ad03a1a74, type: 2}
+    hasTriggered: 0
+  - repairNumber: 12
+    dialouge: {fileID: 11400000, guid: c3554d737662c7f4fa851e50755c9d54, type: 2}
+    hasTriggered: 0
+  - repairNumber: 13
+    dialouge: {fileID: 11400000, guid: 63c9c3bcb38e2a942869bdbf4d37c7dc, type: 2}
+    hasTriggered: 0
   deathDialouges:
   - deathNumber: 1
     requiredDeathReason: 
@@ -635,8 +671,8 @@ Transform:
   m_GameObject: {fileID: 5308259029856808068}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 214.15, y: 19.650005, z: 0}
-  m_LocalScale: {x: 6.826908, y: 6.826908, z: 6.826908}
+  m_LocalPosition: {x: -0.03, y: 0.26, z: 0}
+  m_LocalScale: {x: 10.303169, y: 10.303169, z: 10.303169}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4368113563182636875}
