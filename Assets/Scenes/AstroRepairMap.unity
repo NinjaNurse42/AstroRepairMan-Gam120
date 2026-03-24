@@ -213630,6 +213630,7 @@ MonoBehaviour:
   playerOxygen: {fileID: 2139349854}
   oxygenSlider: {fileID: 1326393344}
   fillImage: {fileID: 1494254109}
+  warningPanel: {fileID: 0}
 --- !u!114 &1326393344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327596,11 +327597,11 @@ PrefabInstance:
       objectReference: {fileID: 898740330}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 173
+      value: -428.4
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 708
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.z
