@@ -169503,7 +169503,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1390658330}
-  - {fileID: 1645273474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -169523,7 +169522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fddbf1b945a7c4eae6b326bf4e4579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  pausePanel: {fileID: 1071988749}
+  pausePanel: {fileID: 1390658329}
 --- !u!1 &1072186580
 GameObject:
   m_ObjectHideFlags: 0
@@ -225163,7 +225162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1390658330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -225175,7 +225174,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1645273474}
   m_Father: {fileID: 1071988753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -265586,12 +265586,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645273473}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.060517, y: 3.2924, z: 3.2924}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1071988753}
+  m_Father: {fileID: 1390658330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
