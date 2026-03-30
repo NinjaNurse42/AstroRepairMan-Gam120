@@ -328494,10 +328494,6 @@ PrefabInstance:
       propertyPath: dialougeBox
       value: 
       objectReference: {fileID: 1491868052}
-    - target: {fileID: 2894309340891546473, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3819465797120468798, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: Cam0
       value: 
@@ -328580,11 +328576,11 @@ PrefabInstance:
       objectReference: {fileID: 898740330}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -425.72
+      value: -76
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.42
+      value: -77
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -328617,22 +328613,6 @@ PrefabInstance:
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: maxShields
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: startingShields
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: onShieldsChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950050995063391777, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
-      propertyPath: onShieldsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

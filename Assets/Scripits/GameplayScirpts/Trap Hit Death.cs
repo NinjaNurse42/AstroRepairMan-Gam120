@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 using System.Collections;
 
 public class TrapDamage : MonoBehaviour
@@ -7,6 +7,8 @@ public class TrapDamage : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private PlayerOxygen playerOxygen;
+    private PlayerInventory inventory;
+    private Transform playerTransform;
 
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
@@ -22,6 +24,8 @@ public class TrapDamage : MonoBehaviour
             anim = collision.GetComponent<Animator>();
             rb = collision.GetComponent<Rigidbody2D>();
             playerOxygen = collision.GetComponent<PlayerOxygen>();
+            inventory = collision.GetComponent<PlayerInventory>();
+            playerTransform = collision.transform;
 
             Die();
         }
@@ -36,6 +40,8 @@ public class TrapDamage : MonoBehaviour
             anim = collision.collider.GetComponent<Animator>();
             rb = collision.collider.GetComponent<Rigidbody2D>();
             playerOxygen = collision.collider.GetComponent<PlayerOxygen>();
+            inventory = collision.collider.GetComponent<PlayerInventory>();
+            playerTransform = collision.collider.transform;
 
             Die();
         }
@@ -46,6 +52,20 @@ public class TrapDamage : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
+
+        // Drop all scrap from the player (if inventory found)
+        if (inventory != null)
+        {
+            Vector3 dropOrigin = playerTransform != null ? playerTransform.position : transform.position;
+            if (debugLogCollisions)
+                Debug.Log($"TrapDamage.Die: dropping {inventory.parts} parts at {dropOrigin}", this);
+
+            inventory.DropAllParts(dropOrigin);
+        }
+        else if (debugLogCollisions)
+        {
+            Debug.LogWarning("TrapDamage.Die: PlayerInventory not found on player - no scrap dropped.", this);
+        }
 
         if (anim != null)
             anim.SetTrigger("Explode");
@@ -77,6 +97,10 @@ public class TrapDamage : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
+
+        // Ensure player's transform is placed at the checkpoint as well
+        if (playerTransform != null)
+            playerTransform.position = target;
 
         if (playerOxygen != null)
             playerOxygen.ResetOxygen();

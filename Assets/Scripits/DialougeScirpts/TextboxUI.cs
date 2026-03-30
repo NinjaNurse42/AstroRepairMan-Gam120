@@ -76,61 +76,9 @@ public class TextboxUI : MonoBehaviour
         }
     }
 
-    // =========================
-    // 💀 DEATH SYSTEM (FIXED)
-    // =========================
-    public void OnPlayerDeath()
-    {
-        deathCount++;
 
-        string reason = PlayerDamage.LastDeathReason;
-        Debug.Log($"Death #{deathCount} | Reason: {reason}");
-
-        DeathDialouge fallback = null;
-
-        foreach (var dd in deathDialouges)
-        {
-            if (dd.hasTriggered) continue;
-            if (dd.deathNumber != deathCount) continue;
-
-            // Save fallback
-            if (string.IsNullOrEmpty(dd.requiredDeathReason))
-            {
-                fallback = dd;
-                continue;
-            }
-
-            // Match reason (case-insensitive)
-            if (reason != null &&
-                reason.ToLower().Contains(dd.requiredDeathReason.ToLower()))
-            {
-                TriggerDialogue(dd.dialouge);
-                dd.hasTriggered = true;
-                return;
-            }
-        }
-
-        // fallback if no match
-        if (fallback != null)
-        {
-            TriggerDialogue(fallback.dialouge);
-            fallback.hasTriggered = true;
-        }
-    }
-
-    // =========================
-    // 💬 DIALOGUE CORE
-    // =========================
-    private void TriggerDialogue(DialougeObject dialogue)
-    {
-        if (dialogue == null)
-        {
-            Debug.LogWarning("Dialogue object missing!");
-            return;
-        }
-
-        ShowDialouge(dialogue);
-    }
+    
+   
 
     public void ShowDialouge(DialougeObject dialogue)
     {
