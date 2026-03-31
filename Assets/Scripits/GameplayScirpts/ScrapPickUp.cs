@@ -2,17 +2,26 @@ using UnityEngine;
 
 public class ScrapPickUp : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] public int partsAmount = 1;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerInventory inventory = other.GetComponent<PlayerInventory>();
+        // support PlayerInventory on the collider or a parent (handles nested player setups)
+        PlayerInventory inventory = other.GetComponent<PlayerInventory>() ?? other.GetComponentInParent<PlayerInventory>();
 
-        if (inventory != null)
+        if (inventory == null)
+            return;
+
+        // Only consume the pickup when the player is below their maximum scrap
+        if (inventory.parts < inventory.MaximumScrap)
         {
-            inventory.AddParts(1);
+            inventory.AddParts(partsAmount);
             Destroy(gameObject);
+        }
+        else
+        {
+            // Optional: debug so you can see the event in the console while testing
+            Debug.Log("ScrapPickUp: player at max scrap, leaving pickup in world", this);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerMovement: MonoBehaviour
 {
     public float MoveForce = 1f;
     public float RotateForce = 10f;
@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        // ✅ Don't process input if the game is paused
+       
         if (Time.timeScale == 0f)
             return;
 
