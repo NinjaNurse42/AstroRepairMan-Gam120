@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 3819465797120468798}
   - component: {fileID: 8030999179894389396}
   - component: {fileID: 2155452691106239053}
-  - component: {fileID: 8950050995063391777}
   - component: {fileID: 2795383403823465757}
   m_Layer: 7
   m_Name: Player
@@ -313,6 +312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   parts: 0
   dialogue: 0
+  scrapPrefab: {fileID: 8759774345326656861, guid: 400bb05e260568e4a9f981b2eca7d8eb, type: 3}
+  dropScatterRadius: 4.05
 --- !u!114 &3281358064733708322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,14 +342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abc0149098591a43a908f5816f01a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDamage
-  deathImpactSpeed: 20
+  deathImpactSpeed: 10
   damageLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   playerOxygen: {fileID: 3281358064733708322}
-  projectileDeathMessage: Hit by projectile!
-  impactDeathMessage: Crashed at high speed!
-  textboxUI: {fileID: 0}
   debugLogCollisions: 1
 --- !u!58 &3558150976036628803
 CircleCollider2D:
@@ -477,24 +475,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8950050995063391777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963256269393994531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ebbebdfcf14fc44ba07ae535b62387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSheilds
-  maxShields: 4
-  startingShields: 4
-  onShieldsChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  debugLogs: 1
 --- !u!114 &2795383403823465757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +613,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -2887184577470883374, guid: eb5de2befbd7bb04db829e5c9f139495, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

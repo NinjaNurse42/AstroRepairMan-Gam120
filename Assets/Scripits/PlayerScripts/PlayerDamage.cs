@@ -6,50 +6,33 @@ public class PlayerDamage : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private PlayerSheilds shields;
+    private PlayerInventory inventory;
 
     [Header("Death Settings")]
     [SerializeField] float deathImpactSpeed = 6f;
     [SerializeField] LayerMask damageLayers = ~0;
     [SerializeField] PlayerOxygen playerOxygen;
 
-    [Header("Death Dialogue")]
-    [SerializeField] string projectileDeathMessage = "Hit by projectile!";
-    [SerializeField] string impactDeathMessage = "Crashed at high speed!";
-    [SerializeField] TextboxUI textboxUI; // drag your TextboxUI here for death dialogue
-
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
-    // ✅ GLOBAL death reason (accessible from any script)
-    public static string LastDeathReason;
-
     bool isDead = false;
-
-    // ✅ Store velocity BEFORE impact
-    private Vector2 lastVelocity;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        shields = GetComponent<PlayerSheilds>();
+        inventory = GetComponent<PlayerInventory>();
 
         if (!CheckPointManager.HasCheckpoint)
             CheckPointManager.SetCheckpoint(transform.position);
     }
 
-    void Update()
-    {
-        // ✅ Track velocity every frame BEFORE collision happens
-        if (rb != null)
-            lastVelocity = rb.linearVelocity; // linearVelocity or velocity works depending on your Rigidbody type
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDead || collision.gameObject == null) return;
+        if (isDead) return;
+        if (collision.gameObject == null) return;
 
-        // ✅ Projectile check (collision)
         var proj = collision.gameObject.GetComponent<Projectile>();
         if (proj != null)
         {
@@ -58,16 +41,9 @@ public class PlayerDamage : MonoBehaviour
 
             bool absorbed = shields != null && shields.TryAbsorbDamage(1);
 
-            LastDeathReason = projectileDeathMessage;
-
             Destroy(proj.gameObject);
 
-            if (absorbed)
-            {
-                if (debugLogCollisions)
-                    Debug.Log("Projectile absorbed by shields", this);
-                return;
-            }
+
 
             if (debugLogCollisions)
                 Debug.Log("No shields available -> dying", this);
@@ -76,7 +52,6 @@ public class PlayerDamage : MonoBehaviour
             return;
         }
 
-        // Layer check
         if ((damageLayers.value & (1 << collision.gameObject.layer)) == 0)
         {
             if (debugLogCollisions)
@@ -84,18 +59,28 @@ public class PlayerDamage : MonoBehaviour
             return;
         }
 
-        // ✅ Use PRE-IMPACT velocity instead of slowed velocity
-        float speed = lastVelocity.magnitude;
+        // Use Rigidbody2D.velocity
+        float speed = rb != null ? rb.linearVelocity.magnitude : 0f;
 
         if (debugLogCollisions)
-            Debug.Log($"Pre-impact speed: {speed:F2}", this);
+            Debug.Log($"Impact speed: {speed:F2}", this);
 
         if (speed >= deathImpactSpeed)
         {
             if (debugLogCollisions)
-                Debug.Log("Fatal impact detected!", this);
+                Debug.Log("Fatal impact detected -> checking shields", this);
 
-            LastDeathReason = impactDeathMessage;
+            bool absorbed = shields != null && shields.TryAbsorbDamage(1);
+
+            if (absorbed)
+            {
+                if (debugLogCollisions)
+                    Debug.Log("Impact absorbed by shields", this);
+                return;
+            }
+
+            if (debugLogCollisions)
+                Debug.Log("No shields available -> dying", this);
 
             Die();
         }
@@ -103,9 +88,9 @@ public class PlayerDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isDead || other == null || other.gameObject == null) return;
+        if (isDead) return;
+        if (other == null || other.gameObject == null) return;
 
-        // ✅ Projectile check (trigger)
         var proj = other.GetComponent<Projectile>();
         if (proj != null)
         {
@@ -114,8 +99,6 @@ public class PlayerDamage : MonoBehaviour
 
             bool absorbed = shields != null && shields.TryAbsorbDamage(1);
 
-            LastDeathReason = projectileDeathMessage;
-
             Destroy(proj.gameObject);
 
             if (absorbed)
@@ -129,22 +112,30 @@ public class PlayerDamage : MonoBehaviour
                 Debug.Log("No shields available -> dying", this);
 
             Die();
+            return;
         }
     }
 
-    // PUBLIC so other scripts can call it
+    // PUBLIC so other scripts like PlayerOxygen can call it
     public void Die()
     {
         if (isDead) return;
 
         isDead = true;
 
+        // Diagnostic: ensure inventory reference and parts count are visible in log
+        if (inventory == null)
+        {
+            Debug.LogWarning("PlayerDamage.Die: PlayerInventory component not found on same GameObject.", this);
+        }
+        else
+        {
+            Debug.Log($"PlayerDamage.Die: dropping {inventory.parts} parts", this);
+            inventory.DropAllParts(transform.position);
+        }
+
         if (anim != null)
             anim.SetTrigger("Explode");
-
-        // ✅ Trigger death dialogue if TextboxUI assigned
-        if (textboxUI != null)
-            textboxUI.OnPlayerDeath();
 
         StartCoroutine(RespawnDelay());
     }
