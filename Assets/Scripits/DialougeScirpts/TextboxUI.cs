@@ -48,7 +48,9 @@ public class TextboxUI : MonoBehaviour
         }
     }
 
-
+    // =========================
+    // 🔧 REPAIR SYSTEM (UNCHANGED)
+    // =========================
     private void CheckRepairs()
     {
         RepairPoint[] points = FindObjectsOfType<RepairPoint>(true);
