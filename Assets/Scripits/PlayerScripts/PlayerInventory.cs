@@ -7,10 +7,17 @@ public class PlayerInventory : MonoBehaviour
     public int parts = 0;
     public int dialogue = 0;
 
-    public  void AddParts(int amount)
+    /// <summary>
+    /// Add parts to the inventory. Returns true when at least one part was added.
+    /// This prevents calling code from assuming the pickup was consumed when the player is full.
+    /// </summary>
+    public bool AddParts(int amount)
     {
+        if (amount <= 0) return false;
+
         parts += amount;
-        Debug.Log("Scrap collected. Total: " + parts);
+        Debug.Log($"Scrap collected. +{amount} -> Total: {parts}", this);
+        return true;
     }
 
     public bool SpendParts(int amount)
@@ -27,8 +34,5 @@ public class PlayerInventory : MonoBehaviour
     public void Storytime(int story)
     {
         dialogue = story;
-        
-
     }
-
 }
