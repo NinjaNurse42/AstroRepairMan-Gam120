@@ -9,31 +9,29 @@ public class PlayerInventory : MonoBehaviour
     [Tooltip("Radius to scatter dropped scrap around the player")]
     [SerializeField] float dropScatterRadius = 0.5f;
 
-    public int parts = 0;
+       public int parts = 0;
     public int dialogue = 0;
 
     /// <summary>
     /// Try to add up to <paramref name="amount"/> parts.
-    /// Returns true only if the full amount was accepted (so callers know whether to destroy the pickup).
-    /// Partial adds are applied but will return false if not everything could be added.
+    /// Returns the number of parts actually added (0..amount).
     /// </summary>
-    public bool AddParts(int amount)
+    public int AddParts(int amount)
     {
-        if (amount <= 0) return false;
+        if (amount <= 0) return 0;
 
         int space = maxParts - parts;
         if (space <= 0)
         {
             Debug.Log($"Inventory full (max {maxParts}) - cannot add {amount}", this);
-            return false;
+            return 0;
         }
 
         int toAdd = Mathf.Min(amount, space);
         parts += toAdd;
         Debug.Log($"Scrap collected. +{toAdd} -> Total: {parts}/{maxParts}", this);
 
-        // Return true only when we accepted the entire requested amount
-        return toAdd == amount;
+        return toAdd;
     }
 
     public bool SpendParts(int amount)
@@ -81,3 +79,4 @@ public class PlayerInventory : MonoBehaviour
         return toDrop;
     }
 }
+
