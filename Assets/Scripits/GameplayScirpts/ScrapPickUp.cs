@@ -17,19 +17,18 @@ public class ScrapPickUp : MonoBehaviour
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         if (sprite != null) sprite.enabled = false;
 
-        bool added = inventory.AddParts(partsAmount);
-
-        if (added)
+        bool addedFully = inventory.AddParts(partsAmount);
+        if (addedFully)
         {
             Destroy(gameObject);
         }
         else
         {
-            // Player is full — re-enable so pickup can be collected later
+            // Player didn't take the full amount (or was full) — re-enable so pickup can be collected later
             if (myCol != null) myCol.enabled = true;
             if (sprite != null) sprite.enabled = true;
 
-            Debug.Log("ScrapPickUp: player at max scrap, leaving pickup in world", this);
+            Debug.Log("ScrapPickUp: player at max scrap or only partially accepted — leaving pickup in world", this);
         }
     }
 }
