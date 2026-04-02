@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c6cb690e9d48c49a6efcca37b5a0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrapPickUp
-  partsAmount: 5
+  partsAmount: 1
 --- !u!61 &5078609206244572079
 BoxCollider2D:
   m_ObjectHideFlags: 0
