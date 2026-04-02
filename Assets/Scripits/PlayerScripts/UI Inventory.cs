@@ -13,7 +13,7 @@ public class PartsTextUI : MonoBehaviour
 
     void Update()
     {
-        
+        bat 
       
             text.text = "" + inventory.parts/2;
         
