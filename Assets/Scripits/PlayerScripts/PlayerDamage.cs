@@ -21,7 +21,6 @@ public class PlayerDamage : MonoBehaviour
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
-
     public static string LastDeathReason;
 
     bool isDead = false;
@@ -79,6 +78,8 @@ public class PlayerDamage : MonoBehaviour
 
         if (speed >= deathImpactSpeed)
         {
+            SFXManager.Instance.Death(death, transform, 1f);
+
             if (debugLogCollisions)
                 Debug.Log("Fatal impact detected!", this);
 
