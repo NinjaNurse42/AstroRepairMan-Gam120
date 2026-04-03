@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEditor.VersionControl;
 using UnityEngine;
@@ -7,9 +8,10 @@ public class PlayerInventory : MonoBehaviour
     public int parts = 0;
     public int dialogue = 0;
 
+    [SerializeField] private AudioClip ScrapPickupClip;
+
     [Header("Drop Settings")]
     [SerializeField] private GameObject scrapPickupPrefab;
-    [SerializeField] private AudioClip ScrapPickupClip;
 
     /// <summary>
     /// Add parts to the inventory. Returns true when at least one part was added.
@@ -19,7 +21,7 @@ public class PlayerInventory : MonoBehaviour
         if (amount <= 0) return false;
 
         parts += amount;
-        SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
+
         Debug.Log($"Scrap collected. +{amount} -> Total: {parts}", this);
         return true;
     }
@@ -68,8 +70,23 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
     
-    public void Storytime(int story)
+    public void Audio (bool play)
     {
-        dialogue = story;
+        play = false;
+        if (AddParts(1))
+        {
+            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
+            play = true;
+        }
+        if (AddParts(2))
+        {
+            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
+            play = true;
+        }
+        if (AddParts(3))
+        {
+            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
+            play = true;
+        }
     }
 }

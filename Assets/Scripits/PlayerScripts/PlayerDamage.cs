@@ -11,6 +11,7 @@ public class PlayerDamage : MonoBehaviour
     [SerializeField] float deathImpactSpeed = 6f;
     [SerializeField] LayerMask damageLayers = ~0;
     [SerializeField] PlayerOxygen playerOxygen;
+    [SerializeField] private AudioClip CollisionDeathClip;
 
     [Header("Death Dialogue")]
     [SerializeField] string projectileDeathMessage = "Hit by projectile!";
@@ -19,7 +20,6 @@ public class PlayerDamage : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
-    [SerializeField] private AudioClip CollisionDeathClip;
 
     public static string LastDeathReason;
 
@@ -101,6 +101,7 @@ public class PlayerDamage : MonoBehaviour
     public void Die()
     {
         SFXManager.Instance.CollisionDeath(CollisionDeathClip, transform, 1.0f);
+
         if (isDead) return;
 
         isDead = true;

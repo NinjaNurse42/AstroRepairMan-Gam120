@@ -471,6 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScrapPickUp
   partsAmount: 1
   pickupDelay: 2
+  ScrapPickupClip: {fileID: 8300000, guid: 1c87c4eaad6ccf147a8fb1d6e324c17f, type: 3}
 --- !u!61 &5078609206244572079
 BoxCollider2D:
   m_ObjectHideFlags: 0
