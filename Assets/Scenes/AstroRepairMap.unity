@@ -9045,6 +9045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfc421e91b044248813ac7f158ee1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  scrapPickup: {fileID: 0}
+  death: {fileID: 0}
 --- !u!4 &52030168
 Transform:
   m_ObjectHideFlags: 0
@@ -12688,7 +12690,7 @@ AudioSource:
   m_GameObject: {fileID: 69791304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0955ab0e0bd1ca84d9506d2aeec9871a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -18132,7 +18134,7 @@ AudioSource:
   m_GameObject: {fileID: 101406730}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0955ab0e0bd1ca84d9506d2aeec9871a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
