@@ -5,7 +5,7 @@ public class SFXManager : MonoBehaviour
     public static SFXManager Instance;
 
     [SerializeField] private AudioSource scrapPickup;
-    [SerializeField] private AudioSource death;
+    [SerializeField] private AudioSource collisionDeath;
 
     private void Awake()
     {
@@ -31,11 +31,11 @@ public class SFXManager : MonoBehaviour
 
     }
 
-    public void Death(AudioClip Death, Transform spawnTransform, float volume)
+    public void CollisionDeath(AudioClip CollisionDeath, Transform spawnTransform, float volume)
     {
-        AudioSource audioSource = Instantiate(death, spawnTransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(collisionDeath, spawnTransform.position, Quaternion.identity);
 
-        audioSource.clip = Death;
+        audioSource.clip = CollisionDeath;
 
         audioSource.volume = volume;
 

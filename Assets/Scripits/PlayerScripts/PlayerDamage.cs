@@ -19,6 +19,7 @@ public class PlayerDamage : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
+    [SerializeField] private AudioClip CollisionDeathClip;
 
     public static string LastDeathReason;
 
@@ -99,6 +100,7 @@ public class PlayerDamage : MonoBehaviour
     // PUBLIC so other scripts can call it
     public void Die()
     {
+        SFXManager.Instance.CollisionDeath(CollisionDeathClip, transform, 1.0f);
         if (isDead) return;
 
         isDead = true;

@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: a9c6cb690e9d48c49a6efcca37b5a0bb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ScrapPickupClip: {fileID: 8300000, guid: 1c87c4eaad6ccf147a8fb1d6e324c17f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

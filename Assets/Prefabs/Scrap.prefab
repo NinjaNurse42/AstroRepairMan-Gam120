@@ -470,6 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrapPickUp
   partsAmount: 1
+  pickupDelay: 2
 --- !u!61 &5078609206244572079
 BoxCollider2D:
   m_ObjectHideFlags: 0

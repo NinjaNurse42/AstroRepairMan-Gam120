@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Drop Settings")]
     [SerializeField] private GameObject scrapPickupPrefab;
+    [SerializeField] private AudioClip ScrapPickupClip;
 
     /// <summary>
     /// Add parts to the inventory. Returns true when at least one part was added.
@@ -18,6 +19,7 @@ public class PlayerInventory : MonoBehaviour
         if (amount <= 0) return false;
 
         parts += amount;
+        SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
         Debug.Log($"Scrap collected. +{amount} -> Total: {parts}", this);
         return true;
     }
