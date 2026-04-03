@@ -15,7 +15,7 @@ public class PartsTextUI : MonoBehaviour
     {
         
       
-            text.text = "" + inventory.parts/2;
+            text.text = "" + inventory.parts;
         
     }
 }

@@ -139397,7 +139397,7 @@ PrefabInstance:
     - target: {fileID: 5279714184103180917, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: scrapPickupPrefab
       value: 
-      objectReference: {fileID: 1986170575}
+      objectReference: {fileID: 8759774345326656861, guid: 400bb05e260568e4a9f981b2eca7d8eb, type: 3}
     - target: {fileID: 5516094714087391095, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_AngularDamping
       value: 20
@@ -350041,11 +350041,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400bb05e260568e4a9f981b2eca7d8eb, type: 3}
---- !u!1 &1986170575 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8759774345326656861, guid: 400bb05e260568e4a9f981b2eca7d8eb, type: 3}
-  m_PrefabInstance: {fileID: 1986170574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1986170576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5687898526140546268, guid: 400bb05e260568e4a9f981b2eca7d8eb, type: 3}

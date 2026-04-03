@@ -7,6 +7,7 @@ public class TrapDamage : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private PlayerOxygen playerOxygen;
+    private PlayerInventory inventory;
 
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
@@ -22,6 +23,7 @@ public class TrapDamage : MonoBehaviour
             anim = collision.GetComponent<Animator>();
             rb = collision.GetComponent<Rigidbody2D>();
             playerOxygen = collision.GetComponent<PlayerOxygen>();
+            inventory = collision.GetComponent<PlayerInventory>() ?? collision.GetComponentInParent<PlayerInventory>();
 
             Die();
         }
@@ -36,6 +38,7 @@ public class TrapDamage : MonoBehaviour
             anim = collision.collider.GetComponent<Animator>();
             rb = collision.collider.GetComponent<Rigidbody2D>();
             playerOxygen = collision.collider.GetComponent<PlayerOxygen>();
+            inventory = collision.collider.GetComponent<PlayerInventory>() ?? collision.collider.GetComponentInParent<PlayerInventory>();
 
             Die();
         }
@@ -46,6 +49,13 @@ public class TrapDamage : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
+
+        // Drop player's scrap here (if any) at player's current position
+        if (inventory != null)
+        {
+            Vector3 dropPos = rb != null ? (Vector3)rb.position : (inventory.transform != null ? inventory.transform.position : transform.position);
+            inventory.DropAllParts(dropPos);
+        }
 
         if (anim != null)
             anim.SetTrigger("Explode");
