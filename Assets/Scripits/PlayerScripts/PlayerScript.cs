@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
     public float MoveForce = 1f;
     public float RotateForce = 10f;
     private Rigidbody2D RB;
+    [SerializeField] private AudioClip CollisionClip;
 
     void Start() => RB = GetComponent<Rigidbody2D>();
 
@@ -28,5 +29,10 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
             RB.AddTorque(-RotateForce);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        SFXManager.Instance.ScrapPickup(CollisionClip, transform, 1.0f);
     }
 }

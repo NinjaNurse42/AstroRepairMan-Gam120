@@ -17,6 +17,7 @@ TagManager:
   - Zone9
   - Zone10
   - ElectricBolt
+  - Projectile
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,6 @@ public class PlayerInventory : MonoBehaviour
     public int parts = 0;
     public int dialogue = 0;
 
-    [SerializeField] private AudioClip ScrapPickupClip;
-
     [Header("Drop Settings")]
     [SerializeField] private GameObject scrapPickupPrefab;
 
@@ -68,25 +66,5 @@ public class PlayerInventory : MonoBehaviour
             return true;
         }
         return false;
-    }
-    
-    public void Audio (bool play)
-    {
-        play = false;
-        if (AddParts(1))
-        {
-            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
-            play = true;
-        }
-        if (AddParts(2))
-        {
-            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
-            play = true;
-        }
-        if (AddParts(3))
-        {
-            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
-            play = true;
-        }
     }
 }

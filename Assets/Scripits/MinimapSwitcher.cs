@@ -27,6 +27,7 @@ public class MinimapSwitcher : MonoBehaviour
     public GameObject player;
     BoxCollider2D box0;
     int boxNum;
+    [SerializeField] private AudioClip MiniSwitcherClip;
 
     private void Start()
     {
@@ -62,42 +63,52 @@ public class MinimapSwitcher : MonoBehaviour
         if (collision.CompareTag("Zone1"))
         {
             boxNum = 0;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone2"))
         {
             boxNum = 1;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone3"))
         {
             boxNum = 2;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone4"))
         {
             boxNum = 3;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone5"))
         {
             boxNum = 4;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone6"))
         {
             boxNum = 5;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone7"))
         {
             boxNum = 6;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone8"))
         {
             boxNum = 7;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone9"))
         {
             boxNum = 8;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
         else if (collision.CompareTag("Zone10"))
         {
             boxNum = 9;
+            SFXManager.Instance.ScrapPickup(MiniSwitcherClip, transform, 1.0f);
         }
 
         switch (boxNum)

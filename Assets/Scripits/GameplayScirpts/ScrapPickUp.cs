@@ -3,6 +3,7 @@ using UnityEngine;
 public class ScrapPickUp : MonoBehaviour
 {
     [SerializeField] public int partsAmount = 1;
+    [SerializeField] private AudioClip ScrapPickupClip;
 
     // Delay after spawn before this pickup can be collected (prevents immediate re-collection on death)
     [SerializeField] private float pickupDelay = 0.5f;
@@ -87,6 +88,7 @@ public class ScrapPickUp : MonoBehaviour
 
         if (added)
         {
+            SFXManager.Instance.ScrapPickup(ScrapPickupClip, transform, 1.0f);
             Destroy(gameObject);
         }
         else

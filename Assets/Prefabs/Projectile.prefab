@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7261053704253464894}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   lifeTime: 4
   damage: 1
-  destroyOnAnyCollision: 0
+  destroyOnAnyCollision: 1
 --- !u!50 &8765563387178894779
 Rigidbody2D:
   serializedVersion: 5
