@@ -8,6 +8,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioSource collisionDeath;
     [SerializeField] private AudioSource collision;
     [SerializeField] private AudioSource miniSwitcher;
+    [SerializeField] private AudioSource repair;
 
     private void Awake()
     {
@@ -70,6 +71,22 @@ public class SFXManager : MonoBehaviour
         AudioSource audioSource = Instantiate(miniSwitcher, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = MiniSwitcher;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void Repair(AudioClip Repair, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(repair, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = Repair;
 
         audioSource.volume = volume;
 

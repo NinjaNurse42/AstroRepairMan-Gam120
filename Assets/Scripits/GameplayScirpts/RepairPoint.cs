@@ -10,6 +10,7 @@ public class RepairPoint : MonoBehaviour
     public GameObject brokenPart;
     public GameObject repairedPart;
 
+    [SerializeField] private AudioClip RepairClip;
 
     [Header("Optional Dialogue")]
     [SerializeField] DialougeObject onRepairedDialogue;
@@ -22,6 +23,7 @@ public class RepairPoint : MonoBehaviour
 
         if (inventory.SpendParts(repairCost))
         {
+            SFXManager.Instance.ScrapPickup(RepairClip, transform, 1.0f);
             isRepaired = true;
             brokenPart.SetActive(false);
             repairedPart.SetActive(true);

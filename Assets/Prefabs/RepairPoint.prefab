@@ -201,6 +201,7 @@ MonoBehaviour:
   TotalRepair: 0
   brokenPart: {fileID: 3662072602260783816}
   repairedPart: {fileID: 8165665988782975537}
+  RepairClip: {fileID: 8300000, guid: 07ca690fa7993b248a3f7227756b6f6b, type: 3}
   onRepairedDialogue: {fileID: 0}
 --- !u!58 &2101543319324866322
 CircleCollider2D:

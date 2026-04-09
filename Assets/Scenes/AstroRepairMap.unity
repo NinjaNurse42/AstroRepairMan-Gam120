@@ -16261,6 +16261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pausePanel: {fileID: 1941285666}
+  subMenus: []
 --- !u!114 &88890558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140150,11 +140151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -256
+      value: -427.4
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45
+      value: -38.5
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -143091,7 +143092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a303a0c6d3031b4a834ebc9e29d7412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinCondition
-  repairsToWin: 12
+  fadeCanvas: {fileID: 0}
+  fadeDuration: 1.5
 --- !u!4 &784422936
 Transform:
   m_ObjectHideFlags: 0
@@ -249924,6 +249926,7 @@ MonoBehaviour:
   collisionDeath: {fileID: 69791306}
   collision: {fileID: 1596517914133590515}
   miniSwitcher: {fileID: 25349604}
+  repair: {fileID: 3193976207561861109}
 --- !u!4 &1389753174
 Transform:
   m_ObjectHideFlags: 0
@@ -383945,6 +383948,68 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8460814014736254388, guid: 4a4092d7c54923846a5b366ad9eb6f57, type: 3}
   m_PrefabInstance: {fileID: 1596517914133590514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3193976207561861108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 690.70776
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -124.38185
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609489229076314180, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160780014590593115, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+      propertyPath: m_Name
+      value: SFX_Repair
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+--- !u!82 &3193976207561861109 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5194163173068470024, guid: 2f58c8e1a6b649f40bc116703560ca66, type: 3}
+  m_PrefabInstance: {fileID: 3193976207561861108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3281391148153557756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384094,4 +384159,5 @@ SceneRoots:
   - {fileID: 1453682675258004895}
   - {fileID: 1596517914133590514}
   - {fileID: 7365109795814727469}
+  - {fileID: 3193976207561861108}
   - {fileID: 1389753174}
