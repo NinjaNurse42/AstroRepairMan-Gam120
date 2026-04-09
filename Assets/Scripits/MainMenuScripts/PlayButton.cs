@@ -8,5 +8,7 @@ public class PlayButton : MonoBehaviour
 
     public void QuitGame() => Application.Quit();
     public void Prototype() => SceneManager.LoadScene("TestScene");
+    public void Resume() => Time.timeScale = 1f;
+    public void Menu() => SceneManager.LoadScene("MainMenu");
 }
 
