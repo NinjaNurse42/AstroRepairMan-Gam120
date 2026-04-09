@@ -2,45 +2,91 @@
 
 public class PauseMenu : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private GameObject pausePanel; // drag your pause panel here
+    [Header("Main UI")]
+    [SerializeField] private GameObject pausePanel;
+
+    [Header("Sub Menus")]
+    [SerializeField] private GameObject[] subMenus;
+    // drag Controls, Credits, Quit Confirm panels here
 
     private bool isPaused = false;
 
     void Start()
     {
         if (pausePanel != null)
-            pausePanel.SetActive(false); // hide initially
+            pausePanel.SetActive(false);
+
+        CloseAllSubMenus();
     }
 
     void Update()
     {
-        // ✅ Detect input even if Time.timeScale = 0
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            // If any submenu is open → close it FIRST
+            if (IsAnySubMenuOpen())
+            {
+                CloseAllSubMenus();
+                return;
+            }
+
+            // Otherwise toggle pause
+            if (isPaused)
+                ResumeGame();
+            else
+                PauseGame();
         }
     }
 
-    private void TogglePause()
+    void PauseGame()
     {
-        if (pausePanel == null)
-            return;
+        if (pausePanel == null) return;
 
-        isPaused = !isPaused; // flip the state
+        isPaused = true;
 
-        pausePanel.SetActive(isPaused); // show/hide panel
-        pausePanel.transform.SetAsLastSibling(); // make sure it appears on top
+        pausePanel.SetActive(true);
+        pausePanel.transform.SetAsLastSibling();
 
-        // Freeze or resume the game
-        Time.timeScale = isPaused ? 0f : 1f;
+        Time.timeScale = 0f;
 
-        // Optional: freeze player velocity when paused
         Rigidbody2D rb = FindObjectOfType<Rigidbody2D>();
-        if (rb != null && isPaused)
+        if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
+    }
+
+    void ResumeGame()
+    {
+        if (pausePanel == null) return;
+
+        isPaused = false;
+
+        pausePanel.SetActive(false);
+
+        // 🔥 ALSO close any leftover submenus
+        CloseAllSubMenus();
+
+        Time.timeScale = 1f;
+    }
+
+    void CloseAllSubMenus()
+    {
+        foreach (GameObject menu in subMenus)
+        {
+            if (menu != null)
+                menu.SetActive(false);
+        }
+    }
+
+    bool IsAnySubMenuOpen()
+    {
+        foreach (GameObject menu in subMenus)
+        {
+            if (menu != null && menu.activeSelf)
+                return true;
+        }
+        return false;
     }
 }
