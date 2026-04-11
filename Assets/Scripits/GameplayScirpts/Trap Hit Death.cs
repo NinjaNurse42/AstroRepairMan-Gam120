@@ -12,6 +12,9 @@ public class TrapDamage : MonoBehaviour
     [Header("Debug")]
     [SerializeField] bool debugLogCollisions = true;
 
+    [SerializeField] private AudioClip TrapDeathClip;
+    [SerializeField] private AudioClip RespawnClip;
+
     bool isDead = false;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +49,7 @@ public class TrapDamage : MonoBehaviour
 
     public void Die()
     {
+        SFXManager.Instance.TrapDeath(TrapDeathClip, transform, 1.0f);
         if (isDead) return;
 
         isDead = true;
@@ -77,6 +81,7 @@ public class TrapDamage : MonoBehaviour
 
     void RestorePlayer()
     {
+        SFXManager.Instance.Respawn(RespawnClip, transform, 1.0f);
         Vector3 target = CheckPointManager.HasCheckpoint
             ? CheckPointManager.LastCheckpoint
             : Vector3.zero;

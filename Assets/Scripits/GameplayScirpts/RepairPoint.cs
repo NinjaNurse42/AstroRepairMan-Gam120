@@ -11,6 +11,7 @@ public class RepairPoint : MonoBehaviour
     public GameObject repairedPart;
 
     [SerializeField] private AudioClip RepairClip;
+    [SerializeField] private AudioClip DenyClip;
 
     [Header("Optional Dialogue")]
     [SerializeField] DialougeObject onRepairedDialogue;
@@ -38,6 +39,7 @@ public class RepairPoint : MonoBehaviour
         }
         else
         {
+            SFXManager.Instance.Deny(DenyClip, transform, 1.0f);
             Debug.Log("Not enough parts");
         }
     }

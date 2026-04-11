@@ -10,6 +10,7 @@ public class TypewriterEffect : MonoBehaviour
     [SerializeField] private float typewriterSpeed = 50f;
     public Coroutine Run(string textToType, TMP_Text textlabel) => StartCoroutine(routine: TypeText(textToType, textlabel));
     private IEnumerator TypeText(string textToType, TMP_Text textlabel)
+
     {
         float t = 0;
         int CharIndex = 0;

@@ -867,6 +867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1962423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18756,6 +18758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &103766743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19941,6 +19945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &108589337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24030,6 +24036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &125150968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40683,6 +40691,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &214243677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44687,6 +44697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &244390358
 Animator:
   serializedVersion: 7
@@ -53940,6 +53952,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &311759072
 Animator:
   serializedVersion: 7
@@ -54473,10 +54487,6 @@ PrefabInstance:
     - target: {fileID: 5534880119019306633, guid: 7702aa3dbccedb54fa1925a2b75a1eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9086789536206592476, guid: 7702aa3dbccedb54fa1925a2b75a1eb1, type: 3}
-      propertyPath: m_TagString
-      value: ElectricBolt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73780,6 +73790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &412628030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78904,6 +78916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &440862147
 Animator:
   serializedVersion: 7
@@ -79703,6 +79717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &444785873
 Animator:
   serializedVersion: 7
@@ -80617,6 +80633,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &448979704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81533,6 +81551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &450881536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83664,6 +83684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &462409727
 Animator:
   serializedVersion: 7
@@ -86312,6 +86334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &479943528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92239,6 +92263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &510181521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103583,6 +103609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &577881781
 Animator:
   serializedVersion: 7
@@ -109225,6 +109253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &597086811
 Animator:
   serializedVersion: 7
@@ -116953,6 +116983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &636633355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119474,6 +119506,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &649962156
 Animator:
   serializedVersion: 7
@@ -122973,6 +123007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &673894931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128034,6 +128070,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &694337157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132467,6 +132505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &721201198
 Animator:
   serializedVersion: 7
@@ -133764,6 +133804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &732442723
 Animator:
   serializedVersion: 7
@@ -134814,6 +134856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &735497572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139728,6 +139772,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1338816846}
     - target: {fileID: 2807683564783284202, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
+      propertyPath: RespawnClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
+    - target: {fileID: 2807683564783284202, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: CollisionDeathClip
       value: 
       objectReference: {fileID: 8300000, guid: 4e29336db6cad364bb9a0629b5ad2e95, type: 3}
@@ -139837,11 +139885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -256
+      value: -164.8
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45
+      value: -56.5
       objectReference: {fileID: 0}
     - target: {fileID: 4368113563182636875, guid: 27f62e6276e76984f85d1799651e0a61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -145381,6 +145429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &804438792
 Animator:
   serializedVersion: 7
@@ -145917,6 +145967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &807746646
 Animator:
   serializedVersion: 7
@@ -146302,6 +146354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &812108034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147611,6 +147665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &817340505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162721,6 +162777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &894812967
 Animator:
   serializedVersion: 7
@@ -164255,6 +164313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &905076588
 Animator:
   serializedVersion: 7
@@ -169747,6 +169807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &932494306
 Animator:
   serializedVersion: 7
@@ -177583,6 +177645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &973433381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181301,6 +181365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &990835750
 Animator:
   serializedVersion: 7
@@ -190988,6 +191054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1055472549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191347,6 +191415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1057409615
 Animator:
   serializedVersion: 7
@@ -204036,6 +204106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1147909731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210589,6 +210661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1184617091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217592,6 +217666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1223412829
 Animator:
   serializedVersion: 7
@@ -227410,6 +227486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1268184132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233316,6 +233394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1302161397
 Animator:
   serializedVersion: 7
@@ -238227,6 +238307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1329960981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240862,6 +240944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1348186238
 Animator:
   serializedVersion: 7
@@ -245982,6 +246066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1370965196
 Animator:
   serializedVersion: 7
@@ -246348,6 +246434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffect
   typewriterSpeed: 25
+  DialogueClip: {fileID: 0}
 --- !u!114 &1375503512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248561,6 +248648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1387351239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249838,6 +249927,12 @@ MonoBehaviour:
   collisionDeath: {fileID: 69791306}
   collision: {fileID: 1596517914133590515}
   miniSwitcher: {fileID: 25349604}
+  repair: {fileID: 0}
+  respawn: {fileID: 3292137966227578584}
+  deny: {fileID: 7231138736872927750}
+  warning: {fileID: 741721277274805311}
+  trapDeath: {fileID: 3641539404114037406}
+  dialogue: {fileID: 2517554950147344551}
 --- !u!4 &1389753174
 Transform:
   m_ObjectHideFlags: 0
@@ -249846,7 +249941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389753172}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 553.4786, y: 162.33708, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -252247,6 +252342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1406219078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254956,6 +255053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1419522611
 Animator:
   serializedVersion: 7
@@ -271427,6 +271526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1530640825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273263,6 +273364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1541541222
 Animator:
   serializedVersion: 7
@@ -285770,6 +285873,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1620905350
 Animator:
   serializedVersion: 7
@@ -286443,6 +286548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1627782233
 Animator:
   serializedVersion: 7
@@ -286994,6 +287101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1628430348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291528,6 +291637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1650411606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299316,6 +299427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1693998947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304376,6 +304489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1721183134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309154,6 +309269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1758661339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309872,6 +309989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1762072580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312339,6 +312458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1774255934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313387,6 +313508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1782524969
 Animator:
   serializedVersion: 7
@@ -313583,6 +313706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1782550307
 Animator:
   serializedVersion: 7
@@ -314545,6 +314670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1785251173
 Animator:
   serializedVersion: 7
@@ -315999,6 +316126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1790441661
 Animator:
   serializedVersion: 7
@@ -327198,6 +327327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1852904239
 Animator:
   serializedVersion: 7
@@ -333714,6 +333845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1895233140
 Animator:
   serializedVersion: 7
@@ -342416,6 +342549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &1939584739
 Animator:
   serializedVersion: 7
@@ -342721,6 +342856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1943617680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343411,6 +343548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1947596733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353525,6 +353664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &1994027889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358170,6 +358311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &2016036920
 Animator:
   serializedVersion: 7
@@ -361534,6 +361677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 8300000, guid: 5f64e1d4571e1574dacbaf59f85cd47f, type: 3}
+  RespawnClip: {fileID: 8300000, guid: c2a3ac4694e4a664ca114d5cb1da3567, type: 3}
 --- !u!114 &2029286585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362474,6 +362619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &2031800531
 Animator:
   serializedVersion: 7
@@ -375081,6 +375228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &2095823528
 Animator:
   serializedVersion: 7
@@ -378708,6 +378857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &2114296978
 Animator:
   serializedVersion: 7
@@ -383976,6 +384127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapDamage
   debugLogCollisions: 1
+  TrapDeathClip: {fileID: 0}
+  RespawnClip: {fileID: 0}
 --- !u!95 &2146507532
 Animator:
   serializedVersion: 7
@@ -384316,6 +384469,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &741721277274805310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 621123880875485480, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_Name
+      value: Warning
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 659.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 145.26003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902688985485972659, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345723582196785666, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592528209153160040, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+      propertyPath: m_Name
+      value: SFX_Warning
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+--- !u!82 &741721277274805311 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5345723582196785666, guid: 2e7dd14be2cb3c8468ba7383ecbdde2c, type: 3}
+  m_PrefabInstance: {fileID: 741721277274805310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1453682675258004895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384425,6 +384648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFX_Collison
       objectReference: {fileID: 0}
+    - target: {fileID: 8460814014736254388, guid: 4a4092d7c54923846a5b366ad9eb6f57, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -384434,6 +384661,68 @@ PrefabInstance:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8460814014736254388, guid: 4a4092d7c54923846a5b366ad9eb6f57, type: 3}
   m_PrefabInstance: {fileID: 1596517914133590514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2517554950147344550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 553.4786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 162.33708
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471932556678347471, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937660569586345440, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+      propertyPath: m_Name
+      value: SFX_Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+--- !u!82 &2517554950147344551 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3537797215666711284, guid: 1c5b1305a7df8174e8bbe3dc14f721cd, type: 3}
+  m_PrefabInstance: {fileID: 2517554950147344550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3281391148153557756
 PrefabInstance:
@@ -384492,6 +384781,192 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810b09e0b565dd04a89dbbcfc140d26c, type: 3}
+--- !u!1001 &3292137966227578583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 438.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 271.69232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643715271908890591, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454671983393693212, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+      propertyPath: m_Name
+      value: SFX_Respawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+--- !u!82 &3292137966227578584 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7614201001324721806, guid: 813a18a52bfbc0945882f41c57da3ce0, type: 3}
+  m_PrefabInstance: {fileID: 3292137966227578583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3641539404114037405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 659.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 145.26003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682042508682368186, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876609936045554712, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+      propertyPath: m_Name
+      value: SFX_TrapDeath
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+--- !u!82 &3641539404114037406 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3332892677461435267, guid: 5ccb63de0b3b85b47a2026067fdeb5c0, type: 3}
+  m_PrefabInstance: {fileID: 3641539404114037405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7231138736872927749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4999381733346039638, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_Name
+      value: SFX_Deny
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 208.52112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 586.9017
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896814314291915242, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+--- !u!82 &7231138736872927750 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9037248546189916026, guid: a3e60c39e328e0b418703921892cc088, type: 3}
+  m_PrefabInstance: {fileID: 7231138736872927749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7365109795814727469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384544,6 +385019,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8668717563585087187, guid: c13da7cf136352640a6a38e6b34c4c8a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 49be3d4f1fe25a1469d92a02ea35ea5e, type: 3}
+    - target: {fileID: 8668717563585087187, guid: c13da7cf136352640a6a38e6b34c4c8a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -384579,11 +385062,16 @@ SceneRoots:
   - {fileID: 1675076310}
   - {fileID: 1030446541}
   - {fileID: 79986648}
+  - {fileID: 594107604}
+  - {fileID: 1563314604}
+  - {fileID: 6855953}
   - {fileID: 3281391148153557756}
   - {fileID: 1453682675258004895}
   - {fileID: 1596517914133590514}
   - {fileID: 7365109795814727469}
+  - {fileID: 3292137966227578583}
+  - {fileID: 2517554950147344550}
+  - {fileID: 7231138736872927749}
+  - {fileID: 741721277274805310}
+  - {fileID: 3641539404114037405}
   - {fileID: 1389753174}
-  - {fileID: 594107604}
-  - {fileID: 1563314604}
-  - {fileID: 6855953}

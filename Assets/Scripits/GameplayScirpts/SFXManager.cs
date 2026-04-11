@@ -9,6 +9,11 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioSource collision;
     [SerializeField] private AudioSource miniSwitcher;
     [SerializeField] private AudioSource repair;
+    [SerializeField] private AudioSource respawn;
+    [SerializeField] private AudioSource deny;
+    [SerializeField] private AudioSource warning;
+    [SerializeField] private AudioSource trapDeath;
+    [SerializeField] private AudioSource dialogue;
 
     private void Awake()
     {
@@ -87,6 +92,86 @@ public class SFXManager : MonoBehaviour
         AudioSource audioSource = Instantiate(repair, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = Repair;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void Respawn(AudioClip Respawn, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(respawn, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = Respawn;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void Deny(AudioClip Deny, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(deny, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = Deny;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void Warning(AudioClip Warning, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(warning, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = Warning;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void TrapDeath(AudioClip TrapDeath, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(trapDeath, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = TrapDeath;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float cliplength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, cliplength);
+
+    }
+
+    public void Dialogue(AudioClip Dialogue, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(dialogue, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = Dialogue;
 
         audioSource.volume = volume;
 

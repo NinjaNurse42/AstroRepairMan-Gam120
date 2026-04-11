@@ -12,6 +12,7 @@ public class PlayerDamage : MonoBehaviour
     [SerializeField] LayerMask damageLayers = ~0;
     [SerializeField] PlayerOxygen playerOxygen;
     [SerializeField] private AudioClip CollisionDeathClip;
+    [SerializeField] private AudioClip RespawnClip;
 
     [Header("Death Dialogue")]
     [SerializeField] string projectileDeathMessage = "Hit by projectile!";
@@ -135,6 +136,8 @@ public class PlayerDamage : MonoBehaviour
 
     public void RestorePlayer()
     {
+        SFXManager.Instance.Respawn(RespawnClip, transform, 1.0f);
+
         Vector3 target = CheckPointManager.HasCheckpoint
             ? CheckPointManager.LastCheckpoint
             : Vector3.zero;
